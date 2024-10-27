@@ -1,26 +1,36 @@
-/* Основной фон и шрифт */
+/* Основной фон и текст */
 body {
     background-color: #f7f4f0; /* Ваш светлый теплый бежевый фон */
     font-family: Arial, sans-serif;
-    color: #4a3b2d; /* Темно-коричневый основной текст */
+    color: #4a3b2d;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 /* Контейнер для основного контента */
 .container {
+    width: 90%;
     max-width: 700px;
-    margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 10px solid #d8cfc6; /* Рамка слева */
+    border-right: 10px solid #d8cfc6; /* Рамка справа */
+    position: relative;
 }
 
 /* Основной заголовок */
 h1 {
     font-size: 1.8rem;
-    color: #8c7151; /* Ваш коричневый цвет для заголовка */
+    color: #8c7151;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -33,6 +43,8 @@ h2 {
     margin: 15px 0 5px;
     padding-bottom: 3px;
     border-bottom: 1px solid #e2d7cd;
+    width: 100%;
+    text-align: left;
 }
 
 /* Стили для select (выпадающего списка) */
@@ -66,16 +78,17 @@ button.custom-button {
     padding: 12px;
     font-size: 1rem;
     color: #ffffff;
-    background-color: #c7a17a; /* Ваш теплый бежевый цвет */
+    background-color: #c7a17a;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 500;
     margin-top: 20px;
+    text-align: center;
 }
 
 button.custom-button:hover {
-    background-color: #b58d6b; /* Более темный оттенок вашего бежевого при наведении */
+    background-color: #b58d6b;
 }
 
 /* Секция для вывода отчета */
@@ -88,4 +101,7 @@ button.custom-button:hover {
     color: #4a3b2d;
     font-size: 0.9rem;
     white-space: pre-line;
+    width: 100%;
+    text-align: left;
 }
+
