@@ -1,57 +1,61 @@
 /* Основной стиль страницы */
 body {
+    background-color: #f7f4f0; /* Светлый теплый бежевый фон */
     font-family: Arial, sans-serif;
+    color: #4a3b2d;
     margin: 0;
     padding: 20px;
-    background-color: #f7f4f0; /* Светлый теплый бежевый фон */
-    color: #4a3b2d; /* Темно-коричневый текст */
 }
 
-/* Стиль заголовка */
+/* Заголовок */
 h1 {
-    color: #8c7151; /* Коричневый цвет для заголовка */
     text-align: center;
+    font-size: 2rem;
+    color: #8c7151; /* Коричневый цвет для заголовка */
     margin-bottom: 20px;
 }
 
 /* Заголовки разделов */
 h2 {
-    color: #8c7151; /* Коричневый цвет */
-    border-bottom: 2px solid #e2d7cd; /* Светло-бежевый цвет для линии под заголовком */
+    color: #8c7151;
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+    border-bottom: 1px solid #e2d7cd;
     padding-bottom: 5px;
-    margin-top: 20px;
 }
 
-/* Стили для выпадающего списка */
+/* Контейнер для основного контента */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для select (выпадающего списка) */
 select[multiple] {
     width: 100%;
-    height: 100px; /* Высота списка */
     padding: 5px;
-    border: 1px solid #cbb9a6;
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: #faf6f3;
-    color: #4a3b2d;
-    font-size: 16px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #cbb9a6;
+    margin-bottom: 10px;
 }
 
-select[multiple] option {
-    padding: 5px;
-}
-
-/* Стиль для текстовых полей уточнения */
+/* Поле для ввода текста */
 input[type="text"] {
     width: 100%;
     padding: 8px;
-    margin-top: 5px;
+    margin: 5px 0 15px;
     border: 1px solid #cbb9a6;
     border-radius: 4px;
-    font-size: 16px;
     background-color: #fefdfc;
 }
 
 /* Кнопка */
-button {
+button.custom-button {
     display: block;
     width: 100%;
     padding: 12px;
@@ -59,24 +63,23 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
-button:hover {
-    background-color: #b58d6b; /* Более темный бежевый при наведении */
+button.custom-button:hover {
+    background-color: #b58d6b; /* Более темный оттенок при наведении */
 }
 
-/* Раздел вывода */
+/* Секция для вывода отчета */
 #output {
-    margin-top: 30px;
+    margin-top: 25px;
     padding: 15px;
-    border: 1px solid #d8cfc6;
     background-color: #fffaf5;
+    border: 1px solid #d8cfc6;
     border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
+    font-size: 0.95rem;
     color: #4a3b2d;
+    white-space: pre-line; /* Чтобы сохранялись переносы строк */
 }
