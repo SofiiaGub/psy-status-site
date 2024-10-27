@@ -17,6 +17,16 @@ function generateStatus() {
             report += '\n';
         }
     }
+document.addEventListener('DOMContentLoaded', function () {
+    const multiSelects = document.querySelectorAll('select[multiple]');
+    multiSelects.forEach(select => {
+        new Choices(select, {
+            removeItemButton: true, // Кнопка для удаления выбранных элементов
+            placeholder: true,
+            placeholderValue: 'Выберите варианты',
+        });
+    });
+});
 
     // Добавляем все разделы в отчет
     addMultiSelectSection('consciousness', 'Сознание', 'consciousness-detail');
