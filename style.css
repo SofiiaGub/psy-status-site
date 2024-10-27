@@ -15,16 +15,33 @@ body {
 .container {
     width: 90%;
     max-width: 700px;
-    padding: 20px; /* Внутренний отступ */
+    padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-left: 20px solid #d8cfc6; /* Широкие рамки слева и справа */
-    border-right: 20px solid #d8cfc6;
     position: relative;
+    overflow: hidden; /* Прячет все, что выходит за границы */
+}
+
+/* Псевдоэлементы для боковых "полей" */
+.container::before, .container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20px; /* Ширина "полей" */
+    background-color: #d8cfc6; /* Цвет боковых рамок */
+}
+
+.container::before {
+    left: -20px; /* Размещаем "поле" слева */
+}
+
+.container::after {
+    right: -20px; /* Размещаем "поле" справа */
 }
 
 /* Основной заголовок */
