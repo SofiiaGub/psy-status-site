@@ -20,13 +20,14 @@
 
     <!-- Раздел Сознание -->
     <h2>Сознание</h2>
-    <label><input type="checkbox" name="consciousness" value="Ясное"> Ясное</label><br>
-    <label><input type="checkbox" name="consciousness" value="Оглушение умеренное"> Оглушение умеренное</label><br>
-    <label><input type="checkbox" name="consciousness" value="Оглушение глубокое"> Оглушение глубокое</label><br>
-    <label><input type="checkbox" name="consciousness" value="Сопор"> Сопор</label><br>
-    <label><input type="checkbox" name="consciousness" value="Кома"> Кома</label><br>
-    <label>Уточнение: <input type="text" name="consciousness-detail"
-            placeholder="Введите дополнительную информацию"></label><br>
+<select name="consciousness" id="consciousness" multiple>
+    <option value="Ясное">Ясное</option>
+    <option value="Оглушение умеренное">Оглушение умеренное</option>
+    <option value="Оглушение глубокое">Оглушение глубокое</option>
+    <option value="Сопор">Сопор</option>
+    <option value="Кома">Кома</option>
+</select>
+<label>Уточнение: <input type="text" name="consciousness-detail" placeholder="Введите дополнительную информацию"></label>
 
     <!-- Раздел Ориентация -->
     <h2>Ориентация</h2>
