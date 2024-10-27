@@ -1,9 +1,8 @@
-/* Основной фон и текст */
 body {
     background-image: url('https://github.com/SofiiaGub/psy-status-site/raw/main/images/background.jpg');
-    background-size: cover;         /* Изображение покроет весь экран */
-    background-repeat: no-repeat;   /* Не повторять изображение */
-    background-position: center;    /* Центрировать изображение */
+    background-repeat: repeat-y;         /* Повтор по вертикали */
+    background-position: left, right;    /* Позиция фона по обе стороны */
+    background-size: contain;            /* Автоматический масштаб для содержимого */
     font-family: Arial, sans-serif;
     color: #4a3b2d;
     margin: 0;
@@ -12,7 +11,7 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     padding-top: 20px;
-    background-color: #f7f4f0; /* Ваш светлый теплый бежевый фон */
+    background-color: #f7f4f0;           /* Фон под изображением */
 }
 
 /* Контейнер для основного контента */
