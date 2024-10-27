@@ -237,7 +237,23 @@
         <option value="Аппетит отсутствует">Аппетит отсутствует</option>
     </select>
     <label>Уточнение: <input type="text" name="health-detail" placeholder="Введите дополнительную информацию"></label><br>
+
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Подключаем Choices.js JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     
+    <!-- Инициализация Choices.js -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const multiSelects = document.querySelectorAll('select[multiple]');
+            multiSelects.forEach(select => {
+                new Choices(select, {
+                    removeItemButton: true, // Кнопка для удаления выбранных элементов
+                    placeholder: true,
+                    placeholderValue: 'Выберите варианты'
+                });
+            });
+        });
     
 <!-- Кнопка для генерации текста -->
 <button onclick="generateStatus()" class="custom-button">Создать отчет</button>
