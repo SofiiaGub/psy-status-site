@@ -1,19 +1,20 @@
 /* Основной фон и текст */
 body {
-    background-color: #f7f4f0; /* Светлый теплый бежевый фон */
+    background-color: #f7f4f0; /* Ваш светлый теплый бежевый фон */
     font-family: Arial, sans-serif;
     color: #4a3b2d;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 /* Контейнер для основного контента */
 .container {
-    width: 100%;
-    max-width: 800px;
+    width: 90%;
+    max-width: 700px;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
@@ -21,8 +22,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-left: 20px solid #d8cfc6; /* Боковые "рамки" для размещения узоров */
-    border-right: 20px solid #d8cfc6;
+    border-left: 10px solid #d8cfc6; /* Рамка слева */
+    border-right: 10px solid #d8cfc6; /* Рамка справа */
+    position: relative;
 }
 
 /* Основной заголовок */
