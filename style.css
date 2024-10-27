@@ -15,15 +15,15 @@ body {
 .container {
     width: 90%;
     max-width: 700px;
-    padding: 20px;
+    padding: 20px; /* Внутренний отступ */
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-left: 10px solid #d8cfc6; /* Рамка слева */
-    border-right: 10px solid #d8cfc6; /* Рамка справа */
+    border-left: 20px solid #d8cfc6; /* Широкие рамки слева и справа */
+    border-right: 20px solid #d8cfc6;
     position: relative;
 }
 
@@ -104,4 +104,3 @@ button.custom-button:hover {
     width: 100%;
     text-align: left;
 }
-
