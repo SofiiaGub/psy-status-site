@@ -1,20 +1,19 @@
 /* Основной фон и текст */
 body {
-    background-color: #f7f4f0; /* Ваш светлый теплый бежевый фон */
+    background-color: #f7f4f0; /* Светлый теплый бежевый фон */
     font-family: Arial, sans-serif;
     color: #4a3b2d;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 /* Контейнер для основного контента */
 .container {
-    width: 90%;
-    max-width: 700px;
+    width: 100%;
+    max-width: 800px;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
@@ -22,26 +21,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    overflow: hidden; /* Прячет все, что выходит за границы */
-}
-
-/* Псевдоэлементы для боковых "полей" */
-.container::before, .container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 20px; /* Ширина "полей" */
-    background-color: #d8cfc6; /* Цвет боковых рамок */
-}
-
-.container::before {
-    left: -20px; /* Размещаем "поле" слева */
-}
-
-.container::after {
-    right: -20px; /* Размещаем "поле" справа */
+    border-left: 20px solid #d8cfc6; /* Боковые "рамки" для размещения узоров */
+    border-right: 20px solid #d8cfc6;
 }
 
 /* Основной заголовок */
