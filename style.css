@@ -7,19 +7,23 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 /* Контейнер для основного контента */
 .container {
+    max-width: 700px;
     width: 100%;
-    max-width: 800px; /* Ширина контейнера */
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    border-left: 30px solid #d8cfc6; /* Боковые поля */
-    border-right: 30px solid #d8cfc6;
-    box-sizing: border-box; /* Учет рамок и отступов в ширине */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0 20px; /* Поля по бокам для создания "пространства" */
 }
 
 /* Основной заголовок */
@@ -38,7 +42,65 @@ h2 {
     margin: 15px 0 5px;
     padding-bottom: 3px;
     border-bottom: 1px solid #e2d7cd;
+    width: 100%;
+    text-align: left;
 }
 
 /* Стили для select (выпадающего списка) */
 select[multiple] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cbb9a6;
+    border-radius: 4px;
+    background-color: #faf6f3;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #4a3b2d;
+}
+
+/* Поле для ввода текста */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cbb9a6;
+    border-radius: 4px;
+    background-color: #fefdfc;
+    font-size: 0.9rem;
+    color: #4a3b2d;
+}
+
+/* Кнопка отправки */
+button.custom-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #c7a17a;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 20px;
+    text-align: center;
+}
+
+button.custom-button:hover {
+    background-color: #b58d6b;
+}
+
+/* Секция для вывода отчета */
+#output {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fffaf5;
+    border: 1px solid #d8cfc6;
+    border-radius: 5px;
+    color: #4a3b2d;
+    font-size: 0.9rem;
+    white-space: pre-line;
+    width: 100%;
+    text-align: left;
+}
+
