@@ -238,33 +238,38 @@
     </select>
     <label>Уточнение: <input type="text" name="health-detail" placeholder="Введите дополнительную информацию"></label><br>
 
-       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+      <!-- Кнопка для генерации текста -->
+        <button onclick="generateStatus()" class="custom-button">Создать отчет</button>
+
+        <!-- Секция для отображения итогового отчета -->
+        <section id="output">
+            <h2>Сгенерированный текст отчета:</h2>
+            <div id="result"></div>
+        </section>
+    </div>
+
+    <!-- Подключаем jQuery и Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
     <!-- Подключаем Choices.js JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-    
+
     <!-- Инициализация Choices.js -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const multiSelects = document.querySelectorAll('select[multiple]');
             multiSelects.forEach(select => {
                 new Choices(select, {
-                    removeItemButton: true, // Кнопка для удаления выбранных элементов
+                    removeItemButton: true,
                     placeholder: true,
                     placeholderValue: 'Выберите варианты'
                 });
             });
         });
-    
-<!-- Кнопка для генерации текста -->
-<button onclick="generateStatus()" class="custom-button">Создать отчет</button>
+    </script>
 
-
-    <!-- Секция для отображения итогового отчета -->
-    <section id="output">
-        <h2>Сгенерированный текст отчета:</h2>
-        <div id="result"></div>
-    </section>
-
+    <!-- Ваш script.js для генерации текста -->
     <script src="script.js"></script>
 </body>
 
