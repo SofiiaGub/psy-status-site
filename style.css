@@ -39,23 +39,19 @@ select[multiple] option {
     padding: 5px;
 }
 
-/* Поля ввода и кнопки */
-input[type="checkbox"], input[type="radio"] {
-    margin-right: 10px;
-}
-
+/* Стиль для текстовых полей уточнения */
 input[type="text"] {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     margin-top: 5px;
     border: 1px solid #cbb9a6;
-    border-radius: 5px;
-    background-color: #faf6f3; /* Светлый бежевый */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fefdfc;
 }
 
-/* Кнопка с теплым бежевым цветом */
-.custom-button {
+/* Кнопка */
+button {
     display: block;
     width: 100%;
     padding: 12px;
@@ -65,14 +61,13 @@ input[type="text"] {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
 
-.custom-button:hover {
+button:hover {
     background-color: #b58d6b; /* Более темный бежевый при наведении */
 }
-
 
 /* Раздел вывода */
 #output {
@@ -82,4 +77,6 @@ input[type="text"] {
     background-color: #fffaf5;
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #4a3b2d;
 }
