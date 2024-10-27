@@ -1,26 +1,66 @@
+/* style.css */
+
+/* Основной стиль страницы */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    line-height: 1.6;
-}
-
-h1 {
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
     color: #333;
 }
 
-section {
+/* Заголовок */
+h1 {
+    color: #0056b3;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+/* Подзаголовки */
+h2 {
+    color: #333;
+    border-bottom: 2px solid #e1e4e8;
+    padding-bottom: 5px;
+    margin-top: 20px;
 }
 
-#result {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
+/* Поля ввода и кнопки */
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 10px;
 }
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Кнопка */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #003d80;
+}
+
+/* Раздел вывода */
+#output {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
