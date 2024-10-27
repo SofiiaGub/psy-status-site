@@ -1,25 +1,23 @@
-/* style.css */
-
 /* Основной стиль страницы */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #f7f4f0; /* Светлый теплый бежевый фон */
+    color: #4a3b2d; /* Темно-коричневый текст */
 }
 
-/* Заголовок */
+/* Стиль заголовка */
 h1 {
-    color: #0056b3;
+    color: #8c7151; /* Коричневый цвет для заголовка */
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Подзаголовки */
+/* Заголовки разделов */
 h2 {
-    color: #333;
-    border-bottom: 2px solid #e1e4e8;
+    color: #8c7151; /* Коричневый цвет */
+    border-bottom: 2px solid #e2d7cd; /* Светло-бежевый цвет для линии под заголовком */
     padding-bottom: 5px;
     margin-top: 20px;
 }
@@ -31,10 +29,12 @@ input[type="checkbox"], input[type="radio"] {
 
 input[type="text"] {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid #cbb9a6;
+    border-radius: 5px;
+    background-color: #faf6f3; /* Светлый бежевый */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 /* Кнопка */
@@ -42,25 +42,26 @@ button {
     display: block;
     width: 100%;
     padding: 12px;
-    background-color: #0056b3;
+    background-color: #b08968; /* Темно-бежевый цвет для кнопки */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
 
 button:hover {
-    background-color: #003d80;
+    background-color: #a1785a; /* Темнее для эффекта при наведении */
 }
 
 /* Раздел вывода */
 #output {
     margin-top: 30px;
     padding: 15px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    border-radius: 4px;
+    border: 1px solid #d8cfc6;
+    background-color: #fffaf5;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
-
