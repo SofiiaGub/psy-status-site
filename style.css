@@ -1,27 +1,10 @@
-/* Основной стиль страницы */
+/* Основной фон и шрифт */
 body {
-    background-color: #f7f4f0; /* Светлый теплый бежевый фон */
+    background-color: #f7f4f0; /* Ваш светлый теплый бежевый фон */
     font-family: Arial, sans-serif;
-    color: #4a3b2d;
+    color: #4a3b2d; /* Темно-коричневый основной текст */
     margin: 0;
     padding: 20px;
-}
-
-/* Заголовок */
-h1 {
-    text-align: center;
-    font-size: 2rem;
-    color: #8c7151; /* Коричневый цвет для заголовка */
-    margin-bottom: 20px;
-}
-
-/* Заголовки разделов */
-h2 {
-    color: #8c7151;
-    font-size: 1.2rem;
-    margin: 10px 0 5px;
-    border-bottom: 1px solid #e2d7cd;
-    padding-bottom: 5px;
 }
 
 /* Контейнер для основного контента */
@@ -31,55 +14,78 @@ h2 {
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Основной заголовок */
+h1 {
+    font-size: 1.8rem;
+    color: #8c7151; /* Ваш коричневый цвет для заголовка */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Заголовки разделов */
+h2 {
+    color: #8c7151;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 15px 0 5px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #e2d7cd;
 }
 
 /* Стили для select (выпадающего списка) */
 select[multiple] {
     width: 100%;
-    padding: 5px;
+    padding: 8px;
+    border: 1px solid #cbb9a6;
     border-radius: 4px;
     background-color: #faf6f3;
-    border: 1px solid #cbb9a6;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #4a3b2d;
 }
 
 /* Поле для ввода текста */
 input[type="text"] {
     width: 100%;
-    padding: 8px;
-    margin: 5px 0 15px;
+    padding: 10px;
+    margin-top: 5px;
     border: 1px solid #cbb9a6;
     border-radius: 4px;
     background-color: #fefdfc;
+    font-size: 0.9rem;
+    color: #4a3b2d;
 }
 
-/* Кнопка */
+/* Кнопка отправки */
 button.custom-button {
     display: block;
     width: 100%;
     padding: 12px;
-    background-color: #c7a17a; /* Теплый бежевый цвет */
-    color: white;
-    border: none;
-    border-radius: 5px;
     font-size: 1rem;
+    color: #ffffff;
+    background-color: #c7a17a; /* Ваш теплый бежевый цвет */
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    margin-top: 15px;
+    font-weight: 500;
+    margin-top: 20px;
 }
 
 button.custom-button:hover {
-    background-color: #b58d6b; /* Более темный оттенок при наведении */
+    background-color: #b58d6b; /* Более темный оттенок вашего бежевого при наведении */
 }
 
 /* Секция для вывода отчета */
 #output {
-    margin-top: 25px;
+    margin-top: 20px;
     padding: 15px;
     background-color: #fffaf5;
     border: 1px solid #d8cfc6;
     border-radius: 5px;
-    font-size: 0.95rem;
     color: #4a3b2d;
-    white-space: pre-line; /* Чтобы сохранялись переносы строк */
+    font-size: 0.9rem;
+    white-space: pre-line;
 }
