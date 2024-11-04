@@ -1,12 +1,7 @@
 function generateStatus() {
     // Определяем пол пациента
     const gender = document.querySelector('input[name="gender"]:checked').value;
-    const pronoun = gender === 'male' ? 'Пациент' : 'Пациентка';
-    const actionVerb = gender === 'male' ? 'осмотрен' : 'осмотрена';
-    const possessivePronoun = gender === 'male' ? 'его' : 'её';
-    const reflexivePronoun = 'себя';
-    const verbEnding = gender === 'male' ? '' : 'а';
-    const adjEnding = gender === 'male' ? '' : 'а';
+    const pronoun = gender === 'Мужчина' ? 'Пациент' : 'Пациентка';
 
     let report = `Психический статус\n`;
 
@@ -18,9 +13,9 @@ function generateStatus() {
 
     if (orientationTimeOptions.length > 0 || orientationPlaceOptions.length > 0 || orientationSelfOptions.length > 0 || orientationNotes) {
         report += "Ориентировка: ";
-        if (orientationTimeOptions.length > 0) report += `во времени ${orientationTimeOptions.join(', ')}; `;
-        if (orientationPlaceOptions.length > 0) report += `в месте ${orientationPlaceOptions.join(', ')}; `;
-        if (orientationSelfOptions.length > 0) report += `в собственной личности ${orientationSelfOptions.join(', ')}; `;
+        if (orientationTimeOptions.length > 0) report += `${orientationTimeOptions.join(', ')}; `;
+        if (orientationPlaceOptions.length > 0) report += `${orientationPlaceOptions.join(', ')}; `;
+        if (orientationSelfOptions.length > 0) report += `${orientationSelfOptions.join(', ')}; `;
         if (orientationNotes) report += `${orientationNotes}`;
         report += '\n';
     }
@@ -29,7 +24,7 @@ function generateStatus() {
     const appearanceOptions = getCheckedOptions('appearance');
     const appearanceNotes = document.querySelector('textarea[name="appearance-notes"]').value;
     if (appearanceOptions.length > 0 || appearanceNotes) {
-        report += `${pronoun} выглядит ${appearanceOptions.join(', ')}`;
+        report += `${pronoun} выглядит: ${appearanceOptions.join(', ')}`;
         if (appearanceNotes) report += `. ${appearanceNotes}`;
         report += '.\n';
     }
@@ -38,7 +33,7 @@ function generateStatus() {
     const speechOptions = getCheckedOptions('speech');
     const speechNotes = document.querySelector('textarea[name="speech-notes"]').value;
     if (speechOptions.length > 0 || speechNotes) {
-        report += `Речь ${speechOptions.join(', ')}`;
+        report += `Речь: ${speechOptions.join(', ')}`;
         if (speechNotes) report += `. ${speechNotes}`;
         report += '.\n';
     }
@@ -47,7 +42,7 @@ function generateStatus() {
     const voiceOptions = getCheckedOptions('voice');
     const voiceNotes = document.querySelector('textarea[name="voice-notes"]').value;
     if (voiceOptions.length > 0 || voiceNotes) {
-        report += `Голос ${voiceOptions.join(', ')}`;
+        report += `Голос: ${voiceOptions.join(', ')}`;
         if (voiceNotes) report += `. ${voiceNotes}`;
         report += '.\n';
     }
@@ -56,7 +51,7 @@ function generateStatus() {
     const behaviorOptions = getCheckedOptions('behavior');
     const behaviorNotes = document.querySelector('textarea[name="behavior-notes"]').value;
     if (behaviorOptions.length > 0 || behaviorNotes) {
-        report += `Поведение ${behaviorOptions.join(', ')}`;
+        report += `Поведение: ${behaviorOptions.join(', ')}`;
         if (behaviorNotes) report += `. ${behaviorNotes}`;
         report += '.\n';
     }
@@ -65,7 +60,7 @@ function generateStatus() {
     const movementsOptions = getCheckedOptions('movements');
     const movementsNotes = document.querySelector('textarea[name="movements-notes"]').value;
     if (movementsOptions.length > 0 || movementsNotes) {
-        report += `Движения ${movementsOptions.join(', ')}`;
+        report += `Движения: ${movementsOptions.join(', ')}`;
         if (movementsNotes) report += `. ${movementsNotes}`;
         report += '.\n';
     }
@@ -74,7 +69,7 @@ function generateStatus() {
     const postureOptions = getCheckedOptions('posture');
     const postureNotes = document.querySelector('textarea[name="posture-notes"]').value;
     if (postureOptions.length > 0 || postureNotes) {
-        report += `Поза, жесты и манеры ${postureOptions.join(', ')}`;
+        report += `Поза, жесты и манеры: ${postureOptions.join(', ')}`;
         if (postureNotes) report += `. ${postureNotes}`;
         report += '.\n';
     }
@@ -83,7 +78,7 @@ function generateStatus() {
     const facialExpressionOptions = getCheckedOptions('facial-expression');
     const facialExpressionNotes = document.querySelector('textarea[name="facial-expression-notes"]').value;
     if (facialExpressionOptions.length > 0 || facialExpressionNotes) {
-        report += `Выражение лица и контакт глаз ${facialExpressionOptions.join(', ')}`;
+        report += `Выражение лица и контакт глаз: ${facialExpressionOptions.join(', ')}`;
         if (facialExpressionNotes) report += `. ${facialExpressionNotes}`;
         report += '.\n';
     }
@@ -92,7 +87,7 @@ function generateStatus() {
     const mimicryOptions = getCheckedOptions('mimicry');
     const mimicryNotes = document.querySelector('textarea[name="mimicry-notes"]').value;
     if (mimicryOptions.length > 0 || mimicryNotes) {
-        report += `Мимика ${mimicryOptions.join(', ')}`;
+        report += `Мимика: ${mimicryOptions.join(', ')}`;
         if (mimicryNotes) report += `. ${mimicryNotes}`;
         report += '.\n';
     }
@@ -101,7 +96,7 @@ function generateStatus() {
     const contactOptions = getCheckedOptions('contact');
     const contactNotes = document.querySelector('textarea[name="contact-notes"]').value;
     if (contactOptions.length > 0 || contactNotes) {
-        report += `Контакт ${contactOptions.join(', ')}`;
+        report += `Контакт: ${contactOptions.join(', ')}`;
         if (contactNotes) report += `. ${contactNotes}`;
         report += '.\n';
     }
@@ -110,7 +105,7 @@ function generateStatus() {
     const answersOptions = getCheckedOptions('answers');
     const answersNotes = document.querySelector('textarea[name="answers-notes"]').value;
     if (answersOptions.length > 0 || answersNotes) {
-        report += `Ответы на вопросы ${answersOptions.join(', ')}`;
+        report += `Ответы на вопросы: ${answersOptions.join(', ')}`;
         if (answersNotes) report += `. ${answersNotes}`;
         report += '.\n';
     }
@@ -119,7 +114,7 @@ function generateStatus() {
     const perceptionOptions = getCheckedOptions('perception');
     const perceptionNotes = document.querySelector('textarea[name="perception-notes"]').value;
     if (perceptionOptions.length > 0 || perceptionNotes) {
-        report += `Восприятие вопросов врача ${perceptionOptions.join(', ')}`;
+        report += `Восприятие вопросов врача: ${perceptionOptions.join(', ')}`;
         if (perceptionNotes) report += `. ${perceptionNotes}`;
         report += '.\n';
     }
@@ -129,9 +124,9 @@ function generateStatus() {
     const remarksReactionOptions = getCheckedOptions('remarks-reaction');
     const conversationThreadNotes = document.querySelector('textarea[name="conversation-thread-notes"]').value;
     if (conversationThreadOptions.length > 0 || remarksReactionOptions.length > 0 || conversationThreadNotes) {
-        report += `Нить разговора ${conversationThreadOptions.join(', ')}`;
+        report += `Нить разговора: ${conversationThreadOptions.join(', ')}`;
         if (remarksReactionOptions.length > 0) {
-            report += `, реакция на замечания ${remarksReactionOptions.join(', ')}`;
+            report += `, реакция на замечания: ${remarksReactionOptions.join(', ')}`;
         }
         if (conversationThreadNotes) report += `. ${conversationThreadNotes}`;
         report += '.\n';
@@ -141,7 +136,7 @@ function generateStatus() {
     const complaintsOptions = getCheckedOptions('complaints');
     const complaintsDetail = document.querySelector('textarea[name="complaints-detail"]').value;
     if (complaintsOptions.length > 0 || complaintsDetail) {
-        report += `Жалобы ${complaintsOptions.join(', ')}`;
+        report += `Жалобы: ${complaintsOptions.join(', ')}`;
         if (complaintsDetail) {
             report += `: ${complaintsDetail}`;
         }
@@ -152,7 +147,7 @@ function generateStatus() {
     const thinkingOptions = getCheckedOptions('thinking');
     const thinkingNotes = document.querySelector('textarea[name="thinking-notes"]').value;
     if (thinkingOptions.length > 0 || thinkingNotes) {
-        report += `Мышление ${thinkingOptions.join(', ')}`;
+        report += `Мышление: ${thinkingOptions.join(', ')}`;
         if (thinkingNotes) report += `. ${thinkingNotes}`;
         report += '.\n';
     }
@@ -161,7 +156,7 @@ function generateStatus() {
     const perception2Options = getCheckedOptions('perception2');
     const perception2Notes = document.querySelector('textarea[name="perception2-notes"]').value;
     if (perception2Options.length > 0 || perception2Notes) {
-        report += `Восприятие ${perception2Options.join(', ')}`;
+        report += `Восприятие: ${perception2Options.join(', ')}`;
         if (perception2Notes) report += `. ${perception2Notes}`;
         report += '.\n';
     }
@@ -170,7 +165,7 @@ function generateStatus() {
     const moodEmotionsOptions = getCheckedOptions('mood-emotions');
     const moodEmotionsNotes = document.querySelector('textarea[name="mood-emotions-notes"]').value;
     if (moodEmotionsOptions.length > 0 || moodEmotionsNotes) {
-        report += `Настроение и эмоции ${moodEmotionsOptions.join(', ')}`;
+        report += `Настроение и эмоции: ${moodEmotionsOptions.join(', ')}`;
         if (moodEmotionsNotes) report += `. ${moodEmotionsNotes}`;
         report += '.\n';
     }
@@ -180,7 +175,7 @@ function generateStatus() {
     const attentionDetail = document.querySelector('textarea[name="attention-detail"]').value;
     const attentionNotes = document.querySelector('textarea[name="attention-notes"]').value;
     if (attentionOptions.length > 0 || attentionDetail || attentionNotes) {
-        report += `Внимание ${attentionOptions.join(', ')}`;
+        report += `Внимание: ${attentionOptions.join(', ')}`;
         if (attentionDetail) report += `: ${attentionDetail}`;
         if (attentionNotes) report += `. ${attentionNotes}`;
         report += '.\n';
@@ -190,7 +185,7 @@ function generateStatus() {
     const memoryOptions = getCheckedOptions('memory');
     const memoryNotes = document.querySelector('textarea[name="memory-notes"]').value;
     if (memoryOptions.length > 0 || memoryNotes) {
-        report += `Память ${memoryOptions.join(', ')}`;
+        report += `Память: ${memoryOptions.join(', ')}`;
         if (memoryNotes) report += `. ${memoryNotes}`;
         report += '.\n';
     }
@@ -199,7 +194,7 @@ function generateStatus() {
     const criticismOptions = getCheckedOptions('criticism');
     const criticismNotes = document.querySelector('textarea[name="criticism-notes"]').value;
     if (criticismOptions.length > 0 || criticismNotes) {
-        report += `Критика к состоянию ${criticismOptions.join(', ')}`;
+        report += `Критика к состоянию: ${criticismOptions.join(', ')}`;
         if (criticismNotes) report += `. ${criticismNotes}`;
         report += '.\n';
     }
@@ -216,31 +211,6 @@ function generateStatus() {
 
 // Функция для получения отмеченных опций по имени
 function getCheckedOptions(name) {
-    return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(option => adjustGender(option.value.toLowerCase()));
+    return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(option => option.value);
 }
 
-// Функция для согласования прилагательных и причастий по роду
-function adjustGender(text) {
-    // Словарь для замены окончаний
-    const replacements = {
-        'ый': gender === 'male' ? 'ый' : 'ая',
-        'ий': gender === 'male' ? 'ий' : 'яя',
-        'ен': gender === 'male' ? 'ен' : 'ена',
-        'ан': gender === 'male' ? 'ан' : 'ана',
-        'т': gender === 'male' ? 'т' : 'та',
-        'л': gender === 'male' ? 'л' : 'ла',
-        'еный': gender === 'male' ? 'еный' : 'еная',
-        'анный': gender === 'male' ? 'анный' : 'анная',
-        'ший': gender === 'male' ? 'ший' : 'шая',
-        // Добавьте дополнительные правила по необходимости
-    };
-
-    // Применяем замены
-    for (const [ending, replacement] of Object.entries(replacements)) {
-        if (text.endsWith(ending)) {
-            text = text.slice(0, -ending.length) + replacement;
-            break;
-        }
-    }
-    return text;
-}
