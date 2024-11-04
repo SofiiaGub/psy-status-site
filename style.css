@@ -1,106 +1,137 @@
+/* Общие стили для тела страницы */
 body {
-    background-image: url('https://github.com/SofiiaGub/psy-status-site/raw/main/images/background.jpg');
-    background-repeat: repeat-y;         /* Повтор по вертикали */
-    background-position: left, right;    /* Позиция фона по обе стороны */
-    background-size: contain;            /* Автоматический масштаб для содержимого */
     font-family: Arial, sans-serif;
     color: #4a3b2d;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding-top: 20px;
-    background-color: #f7f4f0;           /* Фон под изображением */
+    background-color: #f7f4f0;
 }
 
-/* Контейнер для основного контента */
+/* Стили для контейнера основного содержимого */
 .container {
-    width: 100%;
-    max-width: 700px;
+    max-width: 100%;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Учитывает отступы в ширине */
-    display: flex;
-    flex-direction: column; /* Вертикальное расположение элементов */
-    gap: 15px; /* Отступы между элементами */
-    margin: 0 20px; /* Поля по бокам для симметрии */
 }
 
-/* Основной заголовок */
+/* Стили для заголовков */
 h1 {
-    font-size: 1.8rem;
-    color: #8c7151;
-    text-align: center;
-    margin: 0;
-    padding-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-/* Заголовки разделов */
 h2 {
-    color: #8c7151;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Стили для бокового меню */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 60px 0 0; /* Отступ сверху */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    overflow-y: auto; /* Добавляем прокрутку */
+    background-color: #f8f9fa;
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 60px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.sidebar .nav-link {
     font-weight: 500;
-    margin: 0;
-    padding-bottom: 3px;
-    border-bottom: 1px solid #e2d7cd;
-    width: 100%;
-    text-align: left;
+    color: #333;
 }
 
-/* Стили для select (выпадающего списка) */
-select[multiple] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #cbb9a6;
-    border-radius: 4px;
-    background-color: #faf6f3;
-    font-size: 0.9rem;
-    color: #4a3b2d;
+.sidebar .nav-link.active {
+    color: #007bff;
 }
 
-/* Поле для ввода текста */
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #cbb9a6;
-    border-radius: 4px;
-    background-color: #fefdfc;
-    font-size: 0.9rem;
-    color: #4a3b2d;
+.sidebar-heading {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-/* Кнопка отправки */
+/* Стили для основного содержимого */
+main {
+    margin-left: 220px; /* Ширина бокового меню */
+    padding: 20px;
+}
+
+/* Стили для кнопки */
 button.custom-button {
-    display: block;
+    margin-top: 20px;
     width: 100%;
     padding: 12px;
     font-size: 1rem;
     color: #ffffff;
-    background-color: #c7a17a;
+    background-color: #007bff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-weight: 500;
-    text-align: center;
 }
 
 button.custom-button:hover {
-    background-color: #b58d6b;
+    background-color: #0056b3;
 }
 
-/* Секция для вывода отчета */
-#output {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #fffaf5;
-    border: 1px solid #d8cfc6;
-    border-radius: 5px;
-    color: #4a3b2d;
-    font-size: 0.9rem;
-    white-space: pre-line;
-    width: 100%;
-    text-align: left;
+/* Стили для формы */
+section {
+    margin-bottom: 30px;
 }
+
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+textarea.form-control {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+/* Стили для секции вывода отчета */
+#output {
+    margin-top: 40px;
+}
+
+#result {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    main {
+        margin-left: 0;
+    }
+}
+
