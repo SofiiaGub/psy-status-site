@@ -3,274 +3,558 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Психический статус</title>   
+    <title>Психический статус</title>
+    <!-- Подключение Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Ваши стили -->
     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
-<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-    
 </head>
 
 <body>
-<div class="container">
-    <h1>Составление психического статуса</h1>
+    <!-- Контейнер для всего содержимого -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Боковое меню -->
+            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <h5 class="sidebar-heading">Разделы</h5>
+                    <ul class="nav flex-column">
+                        <!-- Ссылки на разделы -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#gender">Пол пациента</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#orientation">Ориентировка</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#appearance">Внешний вид</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#speech">Речь</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#voice">Голос</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#behavior">Поведение</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#movements">Движения</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#posture">Поза, жесты и манеры</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#facial-expression">Выражение лица и контакт глаз</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#mimicry">Мимика</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Контакт</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#answers">Ответы на вопросы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#perception">Восприятие вопросов врача</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#conversation-thread">Нить разговора и реакция на замечания</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#complaints">Жалобы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#thinking">Мышление</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#perception2">Восприятие</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#mood-emotions">Настроение и эмоции</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#attention">Внимание</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#memory">Память</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#criticism">Критика к состоянию</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#additional-notes">Дополнительные заметки</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-    <!-- Пол пациента -->
-    <h2>Выберите пол пациента</h2>
-    <label><input type="radio" name="gender" value="male" checked> Мужчина</label>
-    <label><input type="radio" name="gender" value="female"> Женщина</label>
+            <!-- Основное содержимое -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <div class="container">
+                    <h1>Составление психического статуса</h1>
 
-   <!-- Разделы со списками выбора -->
-    <h2>Сознание</h2>
-    <select name="consciousness" id="consciousness" multiple>
-        <option value="Ясное">Ясное</option>
-        <option value="Оглушение умеренное">Оглушение умеренное</option>
-        <option value="Оглушение глубокое">Оглушение глубокое</option>
-        <option value="Сопор">Сопор</option>
-        <option value="Кома">Кома</option>
-    </select>
-    <label>Уточнение: <input type="text" name="consciousness-detail" placeholder="Введите дополнительную информацию"></label><br>
+                    <!-- Пол пациента -->
+                    <section id="gender">
+                        <h2>Пол пациента</h2>
+                        <label><input type="radio" name="gender" value="male" checked> Мужчина</label>
+                        <label><input type="radio" name="gender" value="female"> Женщина</label>
+                    </section>
 
-    <h2>Ориентация</h2>
-    <select name="orientation" id="orientation" multiple>
-        <option value="Ориентирован всесторонне верно">Ориентирован всесторонне верно</option>
-        <option value="Частично дезориентирован во времени">Частично дезориентирован во времени</option>
-        <option value="Полностью дезориентирован во времени">Полностью дезориентирован во времени</option>
-        <option value="Частично дезориентирован в месте">Частично дезориентирован в месте</option>
-        <option value="Полностью дезориентирован в месте">Полностью дезориентирован в месте</option>
-        <option value="Частично дезориентирован в собственной личности">Частично дезориентирован в собственной личности</option>
-        <option value="Полностью дезориентирован в собственной личности">Полностью дезориентирован в собственной личности</option>
-    </select>
-    <label>Уточнение: <input type="text" name="orientation-detail" placeholder="Введите дополнительную информацию"></label><br>
+                    <!-- Ориентировка -->
+                    <section id="orientation">
+                        <h2>Ориентировка</h2>
+                        <h3>Дата и время</h3>
+                        <label><input type="checkbox" name="orientation-time" value="Ориентирован всесторонне верно"> Ориентирован всесторонне верно</label><br>
+                        <label><input type="checkbox" name="orientation-time" value="Частично дезориентирован во времени"> Частично дезориентирован во времени</label><br>
+                        <label><input type="checkbox" name="orientation-time" value="Полностью дезориентирован во времени"> Полностью дезориентирован во времени</label><br>
 
-    <h2>Как пришел на беседу с врачом</h2>
-    <select name="meeting" id="meeting" multiple>
-        <option value="Пришел по приглашению">Пришел по приглашению</option>
-        <option value="Беседа в пределах палаты">Беседа в пределах палаты</option>
-        <option value="Беседа у постели больного">Беседа у постели больного</option>
-    </select>
-    <label>Уточнение: <input type="text" name="meeting-detail" placeholder="Введите дополнительную информацию"></label><br>
+                        <h3>Место</h3>
+                        <label><input type="checkbox" name="orientation-place" value="Ориентирован в месте"> Ориентирован в месте</label><br>
+                        <label><input type="checkbox" name="orientation-place" value="Частично дезориентирован в месте"> Частично дезориентирован в месте</label><br>
+                        <label><input type="checkbox" name="orientation-place" value="Полностью дезориентирован в месте"> Полностью дезориентирован в месте</label><br>
 
-    <h2>Речь</h2>
-    <select name="speech" id="speech" multiple>
-        <option value="Темп нормальный">Темп нормальный</option>
-        <option value="Темп замедленный">Темп замедленный</option>
-        <option value="Темп ускоренный">Темп ускоренный</option>
-        <option value="Использует нецензурные слова">Использует нецензурные слова</option>
-        <option value="Речь многословная">Речь многословная</option>
-        <option value="Речь отрывистая">Речь отрывистая</option>
-    </select>
-    <label>Уточнение: <input type="text" name="speech-detail" placeholder="Введите дополнительную информацию"></label><br>
+                        <h3>Собственная личность</h3>
+                        <label><input type="checkbox" name="orientation-self" value="Ориентирован в собственной личности"> Ориентирован в собственной личности</label><br>
+                        <label><input type="checkbox" name="orientation-self" value="Частично дезориентирован в собственной личности"> Частично дезориентирован в собственной личности</label><br>
+                        <label><input type="checkbox" name="orientation-self" value="Полностью дезориентирован в собственной личности"> Полностью дезориентирован в собственной личности</label><br>
 
-    <h2>Голос</h2>
-    <select name="voice" id="voice" multiple>
-        <option value="Громкость нормальная">Громкость нормальная</option>
-        <option value="Тихий">Тихий</option>
-        <option value="Громкий">Громкий</option>
-        <option value="Достаточной модуляции">Достаточной модуляции</option>
-        <option value="Слабомодулированный">Слабомодулированный</option>
-    </select>
-    <label>Уточнение: <input type="text" name="voice-detail" placeholder="Введите дополнительную информацию"></label><br>
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="orientation-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
 
-    <h2>Внешний вид и Поведение</h2>
-    <select name="appearance" id="appearance" multiple>
-        <option value="Опрятный">Опрятный</option>
-        <option value="Неопрятный">Неопрятный</option>
-        <option value="Соответствует погоде">Соответствует погоде</option>
-        <option value="Не соответствует погоде">Не соответствует погоде</option>
-        <option value="Избыток макияжа">Избыток макияжа</option>
-    </select>
-    <label>Уточнение: <input type="text" name="appearance-detail" placeholder="Введите дополнительную информацию"></label><br>
+                    <!-- Внешний вид -->
+                    <section id="appearance">
+                        <h2>Внешний вид</h2>
+                        <!-- Варианты ответов -->
+                        <label><input type="checkbox" name="appearance" value="Опрятный"> Опрятный</label><br>
+                        <label><input type="checkbox" name="appearance" value="Неопрятный (за внешностью не следит)"> Неопрятный (за внешностью не следит)</label><br>
+                        <label><input type="checkbox" name="appearance" value="Одет не по погоде"> Одет не по погоде</label><br>
+                        <label><input type="checkbox" name="appearance" value="Необычная, вычурная одежда"> Необычная, вычурная одежда</label><br>
+                        <label><input type="checkbox" name="appearance" value="Лицо со следами макияжа"> Лицо со следами макияжа</label><br>
+                        <label><input type="checkbox" name="appearance" value="Избыток макияжа"> Избыток макияжа</label><br>
+                        <label><input type="checkbox" name="appearance" value="Навыки самообслуживания отсутствуют"> Навыки самообслуживания отсутствуют</label><br>
+                        <label><input type="checkbox" name="appearance" value="Выглядит старше своих лет"> Выглядит старше своих лет</label><br>
+                        <label><input type="checkbox" name="appearance" value="Выглядит младше своих лет"> Выглядит младше своих лет</label><br>
+                        <label><input type="checkbox" name="appearance" value="Выглядит соответствующе возрасту"> Выглядит соответствующе возрасту</label><br>
 
-    <h2>Поза, жесты и манеры</h2>
-    <select name="posture" id="posture" multiple>
-        <option value="Естественная">Естественная</option>
-        <option value="Неестественная">Неестественная</option>
-        <option value="Скованная">Скованная</option>
-        <option value="Демонстративная">Демонстративная</option>
-        <option value="Активная">Активная</option>
-        <option value="Скудная">Скудная</option>
-    </select>
-    <label>Уточнение: <input type="text" name="posture-detail" placeholder="Введите дополнительную информацию"></label><br>
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="appearance-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
 
-    <h2>Выражение лица и Мимика</h2>
-    <select name="face" id="face" multiple>
-        <option value="Обычное">Обычное</option>
-        <option value="Печальное">Печальное</option>
-        <option value="Радостное">Радостное</option>
-        <option value="Испуганное">Испуганное</option>
-        <option value="Живая">Живая</option>
-        <option value="Гипермимия">Гипермимия</option>
-    </select>
-    <label>Уточнение: <input type="text" name="face-detail" placeholder="Введите дополнительную информацию"></label><br>
+                    <!-- Речь -->
+                    <section id="speech">
+                        <h2>Речь</h2>
+                        <!-- Варианты ответов -->
+                        <label><input type="checkbox" name="speech" value="Чистая, правильная"> Чистая, правильная</label><br>
+                        <label><input type="checkbox" name="speech" value="С заиканием"> С заиканием</label><br>
+                        <label><input type="checkbox" name="speech" value="С употреблением нецензурных слов"> С употреблением нецензурных слов</label><br>
+                        <label><input type="checkbox" name="speech" value="Достаточного темпа"> Достаточного темпа</label><br>
+                        <label><input type="checkbox" name="speech" value="Медленная"> Медленная</label><br>
+                        <label><input type="checkbox" name="speech" value="Быстрая"> Быстрая</label><br>
+                        <label><input type="checkbox" name="speech" value="Отрывистая"> Отрывистая</label><br>
+                        <label><input type="checkbox" name="speech" value="Скандирующая"> Скандирующая</label><br>
+                        <label><input type="checkbox" name="speech" value="Телеграфный стиль речи"> Телеграфный стиль речи</label><br>
+                        <label><input type="checkbox" name="speech" value="Невнятная, малопонятная"> Невнятная, малопонятная</label><br>
+                        <label><input type="checkbox" name="speech" value="Невнятное бормотание"> Невнятное бормотание</label><br>
+                        <label><input type="checkbox" name="speech" value="Немота"> Немота</label><br>
+                        <label><input type="checkbox" name="speech" value="Мутизм полный или частичный"> Мутизм полный или частичный</label><br>
+                        <label><input type="checkbox" name="speech" value="Крайне многословен"> Крайне многословен</label><br>
+                        <label><input type="checkbox" name="speech" value="Говорит сбивчиво, взахлёб"> Говорит сбивчиво, взахлёб</label><br>
+                        <label><input type="checkbox" name="speech" value="Немногословен"> Немногословен</label><br>
+                        <label><input type="checkbox" name="speech" value="Разорванность"> Разорванность</label><br>
+                        <label><input type="checkbox" name="speech" value="Бессвязность"> Бессвязность</label><br>
 
-    <h2>Контакт</h2>
-    <select name="contact" id="contact" multiple>
-        <option value="Доступен">Доступен</option>
-        <option value="Продуктивный">Продуктивный</option>
-        <option value="Формальный">Формальный</option>
-        <option value="Затруднен">Затруднен</option>
-    </select>
-    <label>Уточнение: <input type="text" name="contact-detail" placeholder="Введите дополнительную информацию"></label><br>
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="speech-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
 
-    <h2>Ответы на вопросы</h2>
-    <select name="answers" id="answers" multiple>
-        <option value="В плане заданного">В плане заданного</option>
-        <option value="Не в плане заданного">Не в плане заданного</option>
-        <option value="Игнорирует суть вопроса">Игнорирует суть вопроса</option>
-        <option value="С использованием сленга">С использованием сленга</option>
-        <option value="Не отвечает">Не отвечает</option>
-        <option value="Отвечает охотно">Отвечает охотно</option>
-        <option value="Отвечает неохотно">Отвечает неохотно</option>
-    </select>
-    <label>Уточнение: <input type="text" name="answers-detail" placeholder="Введите дополнительную информацию"></label><br>
+                    <!-- Голос -->
+                    <section id="voice">
+                        <h2>Голос</h2>
+                        <!-- Варианты ответов -->
+                        <label><input type="checkbox" name="voice" value="Нормальной громкости"> Нормальной громкости</label><br>
+                        <label><input type="checkbox" name="voice" value="Достаточной модуляции"> Достаточной модуляции</label><br>
+                        <label><input type="checkbox" name="voice" value="Тихий"> Тихий</label><br>
+                        <label><input type="checkbox" name="voice" value="Громкий"> Громкий</label><br>
+                        <label><input type="checkbox" name="voice" value="Охриплый"> Охриплый</label><br>
+                        <label><input type="checkbox" name="voice" value="Грубый"> Грубый</label><br>
+                        <label><input type="checkbox" name="voice" value="Монотонный, маломодулированный"> Монотонный, маломодулированный</label><br>
+                        <label><input type="checkbox" name="voice" value="Высокомодулированный"> Высокомодулированный</label><br>
+                        <label><input type="checkbox" name="voice" value="Неуверенный"> Неуверенный</label><br>
+                        <label><input type="checkbox" name="voice" value="Подавленный"> Подавленный</label><br>
+                        <label><input type="checkbox" name="voice" value="Дрожащий"> Дрожащий</label><br>
+                        <label><input type="checkbox" name="voice" value="Плачущий"> Плачущий</label><br>
+                        <label><input type="checkbox" name="voice" value="Саркастичный тон"> Саркастичный тон</label><br>
+                        <label><input type="checkbox" name="voice" value="Безучастный"> Безучастный</label><br>
+                        <label><input type="checkbox" name="voice" value="Просящий"> Просящий</label><br>
 
-    <h2>Восприятие вопросов врача</h2>
-    <select name="perception" id="perception" multiple>
-        <option value="Спокойное">Спокойное</option>
-        <option value="Раздраженное">Раздраженное</option>
-        <option value="Отказывается отвечать">Отказывается отвечать</option>
-        <option value="Проявляет вызов">Проявляет вызов</option>
-        <option value="Уходит от ответа">Уходит от ответа</option>
-    </select>
-    <label>Уточнение: <input type="text" name="perception-detail" placeholder="Введите дополнительную информацию"></label><br>
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="voice-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
 
-    <h2>Нить разговора</h2>
-    <select name="conversation" id="conversation" multiple>
-        <option value="Держит">Держит</option>
-        <option value="Не держит">Не держит</option>
-        <option value="Перескакивает с темы на тему">Перескакивает с темы на тему</option>
-    </select>
-    <label>Уточнение: <input type="text" name="conversation-detail" placeholder="Введите дополнительную информацию"></label><br>
+                    <!-- Поведение -->
+                    <section id="behavior">
+                        <h2>Поведение</h2>
+                        <!-- Варианты ответов -->
+                        <label><input type="checkbox" name="behavior" value="Спокойное"> Спокойное</label><br>
+                        <label><input type="checkbox" name="behavior" value="Тремор"> Тремор</label><br>
+                        <label><input type="checkbox" name="behavior" value="Назойлив"> Назойлив</label><br>
+                        <label><input type="checkbox" name="behavior" value="Навязчиво обращается к врачу с вопросами, следует за ним"> Навязчиво обращается к врачу с вопросами, следует за ним</label><br>
+                        <label><input type="checkbox" name="behavior" value="Бесцеремонен"> Бесцеремонен</label><br>
+                        <label><input type="checkbox" name="behavior" value="Ведет себя непосредственно, держится раскованно, развязно, без чувства дистанции"> Ведет себя непосредственно, держится раскованно, развязно, без чувства дистанции</label><br>
+                        <label><input type="checkbox" name="behavior" value="Инфантильное"> Инфантильное</label><br>
+                        <label><input type="checkbox" name="behavior" value="Нелепое, дурашливое гримасничание"> Нелепое, дурашливое гримасничание</label><br>
+                        <label><input type="checkbox" name="behavior" value="Агрессивное возбуждение"> Агрессивное возбуждение</label><br>
+                        <label><input type="checkbox" name="behavior" value="Импульсивное"> Импульсивное</label><br>
+                        <label><input type="checkbox" name="behavior" value="Враждебное, настроен воинственно"> Враждебное, настроен воинственно</label><br>
+                        <label><input type="checkbox" name="behavior" value="Мория"> Мория</label><br>
+                        <label><input type="checkbox" name="behavior" value="Негативистичное"> Негативистичное</label><br>
+                        <label><input type="checkbox" name="behavior" value="Заторможенность"> Заторможенность</label><br>
+                        <label><input type="checkbox" name="behavior" value="Ригидность"> Ригидность</label><br>
+                        <label><input type="checkbox" name="behavior" value="Суетливое, метание, беспокойство"> Суетливое, метание, беспокойство</label><br>
+                        <label><input type="checkbox" name="behavior" value="Взволнован, тревожен"> Взволнован, тревожен</label><br>
+                        <label><input type="checkbox" name="behavior" value="Раптус"> Раптус</label><br>
+                        <label><input type="checkbox" name="behavior" value="Амбитендентность"> Амбитендентность</label><br>
+                        <label><input type="checkbox" name="behavior" value="Апатичное поведение"> Апатичное поведение</label><br>
+                        <label><input type="checkbox" name="behavior" value="Лежит в кровати, предоставлен сам себе, засыпает"> Лежит в кровати, предоставлен сам себе, засыпает</label><br>
+                        <label><input type="checkbox" name="behavior" value="Сонлив"> Сонлив</label><br>
+                        <label><input type="checkbox" name="behavior" value="Немотивированно сопротивляется действиям врача и мед. персонала"> Немотивированно сопротивляется действиям врача и мед. персонала</label><br>
+                        <label><input type="checkbox" name="behavior" value="Малоподвижен, лежит в постели, к окружающей обстановке безучастен"> Малоподвижен, лежит в постели, к окружающей обстановке безучастен</label><br>
+                        <label><input type="checkbox" name="behavior" value="Самостоятельно не может подняться с постели"> Самостоятельно не может подняться с постели</label><br>
+                        <label><input type="checkbox" name="behavior" value="Хаотичное возбуждение в пределах постели"> Хаотичное возбуждение в пределах постели</label><br>
 
-    <h2>Жалобы</h2>
-    <select name="complaints" id="complaints" multiple>
-        <option value="Не предъявляет">Не предъявляет</option>
-        <option value="Предъявляет на определенные аспекты">Предъявляет на определенные аспекты</option>
-    </select>
-    <label>Уточнение: <input type="text" name="complaints-detail" placeholder="Введите дополнительную информацию"></label><br>
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="behavior-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
 
-    <h2>Нарушение содержания мышления</h2>
-    <select name="thinking" id="thinking" multiple>
-        <option value="Отсутствуют">Отсутствуют</option>
-        <option value="Бредовые идеи величия">Бредовые идеи величия</option>
-        <option value="Бредовые идеи преследования">Бредовые идеи преследования</option>
-        <option value="Бредовые идеи ревности">Бредовые идеи ревности</option>
-        <option value="Бредовые идеи самообвинения">Бредовые идеи самообвинения</option>
-        <option value="Гипохондрические идеи">Гипохондрические идеи</option>
-        <option value="Религиозные идеи">Религиозные идеи</option>
-        <option value="Эротические идеи">Эротические идеи</option>
-    </select>
-    <label>Уточнение: <input type="text" name="thinking-detail" placeholder="Введите дополнительную информацию"></label><br>
+                    <!-- Движения -->
+                    <section id="movements">
+                        <h2>Движения</h2>
+                        <!-- Варианты ответов -->
+                        <label><input type="checkbox" name="movements" value="Естественные"> Естественные</label><br>
+                        <label><input type="checkbox" name="movements" value="Спокойные"> Спокойные</label><br>
+                        <label><input type="checkbox" name="movements" value="Плавные"> Плавные</label><br>
+                        <label><input type="checkbox" name="movements" value="Замедленные"> Замедленные</label><br>
+                        <label><input type="checkbox" name="movements" value="Ускоренные"> Ускоренные</label><br>
+                        <label><input type="checkbox" name="movements" value="Стереотипные, однообразные"> Стереотипные, однообразные</label><br>
+                        <label><input type="checkbox" name="movements" value="Угловатые, резкие, порывистые, суетливые"> Угловатые, резкие, порывистые, суетливые</label><br>
+                        <label><input type="checkbox" name="movements" value="Неуверенные, неуклюжие"> Неуверенные, неуклюжие</label><br>
+                        <label><input type="checkbox" name="movements" value="Уверенные, точные"> Уверенные, точные</label><br>
+                        <label><input type="checkbox" name="movements" value="Подчеркнуто экспрессивные, демонстративные, грациозные"> Подчеркнуто экспрессивные, демонстративные, грациозные</label><br>
+                        <label><input type="checkbox" name="movements" value="Действия носят целенаправленный характер"> Действия носят целенаправленный характер</label><br>
+                        <label><input type="checkbox" name="movements" value="Действия носят нецеленаправленный характер"> Действия носят нецеленаправленный характер</label><br>
+                        <label><input type="checkbox" name="movements" value="Не может завершить действия до конца"> Не может завершить действия до конца</label><br>
 
-    <h2>Нарушение ассоциативного процесса мышления</h2>
-    <select name="associative" id="associative" multiple>
-        <option value="Темп замедленный">Темп замедленный</option>
-        <option value="Темп нормальный">Темп нормальный</option>
-        <option value="Темп ускоренный">Темп ускоренный</option>
-        <option value="Логичное мышление">Логичное мышление</option>
-        <option value="Паралогичное мышление">Паралогичное мышление</option>
-        <option value="Резонерское мышление">Резонерское мышление</option>
-        <option value="Аморфное мышление">Аморфное мышление</option>
-    </select>
-    <label>Уточнение: <input type="text" name="associative-detail" placeholder="Введите дополнительную информацию"></label><br>
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="movements-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
 
-    <h2>Нарушение восприятия</h2>
-    <select name="perception2" id="perception2" multiple>
-        <option value="Зрительные галлюцинации">Зрительные галлюцинации</option>
-        <option value="Слуховые галлюцинации">Слуховые галлюцинации</option>
-        <option value="Тактильные галлюцинации">Тактильные галлюцинации</option>
-        <option value="Обонятельные галлюцинации">Обонятельные галлюцинации</option>
-        <option value="Вкусовые галлюцинации">Вкусовые галлюцинации</option>
-        <option value="Иллюзии">Иллюзии</option>
-        <option value="Дереализация">Дереализация</option>
-        <option value="Деперсонализация">Деперсонализация</option>
-    </select>
-    <label>Уточнение: <input type="text" name="perception2-detail" placeholder="Введите дополнительную информацию"></label><br>
+                    <!-- Поза, жесты и манеры -->
+                    <section id="posture">
+                        <h2>Поза, жесты и манеры</h2>
+                        <!-- Варианты ответов -->
+                        <label><input type="checkbox" name="posture" value="Естественная поза и жесты"> Естественная поза и жесты</label><br>
+                        <label><input type="checkbox" name="posture" value="В разговоре держится естественно"> В разговоре держится естественно</label><br>
+                        <label><input type="checkbox" name="posture" value="Манерна, театральна, демонстративна, эпатажна"> Манерна, театральна, демонстративна, эпатажна</label><br>
+                        <label><input type="checkbox" name="posture" value="Добровольно принимает и удерживает неадекватные или вычурные позы"> Добровольно принимает и удерживает неадекватные или вычурные позы</label><br>
+                        <label><input type="checkbox" name="posture" value="Вычурная, неудобная поза"> Вычурная, неудобная поза</label><br>
+                        <label><input type="checkbox" name="posture" value="Восковая гибкость"> Восковая гибкость</label><br>
+                        <label><input type="checkbox" name="posture" value="Держится уверенно, с достоинством"> Держится уверенно, с достоинством</label><br>
+                        <label><input type="checkbox" name="posture" value="Сидит сгорбившись"> Сидит сгорбившись</label><br>
+                        <label><input type="checkbox" name="posture" value="Скованная поза"> Скованная поза</label><br>
+                        <label><input type="checkbox" name="posture" value="Позы не меняет"> Позы не меняет</label><br>
+                        <label><input type="checkbox" name="posture" value="Активно жестикулирует"> Активно жестикулирует</label><br>
+                        <label><input type="checkbox" name="posture" value="Жестикуляция скудная"> Жестикуляция скудная</label><br>
+                        <label><input type="checkbox" name="posture" value="Не жестикулирует"> Не жестикулирует</label><br>
+                        <label><input type="checkbox" name="posture" value="Угрожающие жесты"> Угрожающие жесты</label><br>
+                        <label><input type="checkbox" name="posture" value="Не может усидеть на месте"> Не может усидеть на месте</label><br>
 
-    <h2>Настроение и Эмоции</h2>
-    <select name="emotions" id="emotions" multiple>
-        <option value="Фон настроения депрессивный">Фон настроения депрессивный</option>
-        <option value="Фон настроения тревожный">Фон настроения тревожный</option>
-        <option value="Фон настроения эйфорический">Фон настроения эйфорический</option>
-        <option value="Агрессивность">Агрессивность</option>
-        <option value="Тревога">Тревога</option>
-        <option value="Суицидальные мысли">Суицидальные мысли</option>
-    </select>
-    <label>Уточнение: <input type="text" name="emotions-detail" placeholder="Введите дополнительную информацию"></label><br>
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="posture-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
 
-    <h2>Внимание</h2>
-    <select name="attention" id="attention" multiple>
-        <option value="Концентрируется на вопросах">Концентрируется на вопросах</option>
-        <option value="Снижен объем внимания">Снижен объем внимания</option>
-        <option value="Легко отвлекается">Легко отвлекается</option>
-    </select>
-    <label>Уточнение: <input type="text" name="attention-detail" placeholder="Введите дополнительную информацию"></label><br>
+                    <!-- Выражение лица и контакт глаз -->
+                    <section id="facial-expression">
+                        <h2>Выражение лица и контакт глаз</h2>
+                        <!-- Варианты ответов -->
+                        <label><input type="checkbox" name="facial-expression" value="Обычное"> Обычное</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Приветливое"> Приветливое</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Плаксивое"> Плаксивое</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Плач без слез"> Плач без слез</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Контакт глаз удерживает"> Контакт глаз удерживает</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Контакт глаз не удерживает"> Контакт глаз не удерживает</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Отвлекаем"> Отвлекаем</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Ищет зрительный контакт"> Ищет зрительный контакт</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Пристально смотрит в глаза врача"> Пристально смотрит в глаза врача</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="С повышенным вниманием следит за ответной реакцией врача"> С повышенным вниманием следит за ответной реакцией врача</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Плачет, но быстро успокаивается"> Плачет, но быстро успокаивается</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Выглядит отчужденным, отрешенным от окружающего мира"> Выглядит отчужденным, отрешенным от окружающего мира</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Радостное, счастливое"> Радостное, счастливое</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Благодушное, беззаботное"> Благодушное, беззаботное</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Печальное"> Печальное</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Скорбное"> Скорбное</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Грустное"> Грустное</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Страдальческое"> Страдальческое</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Удивленное"> Удивленное</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Испуганное"> Испуганное</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Недовольное"> Недовольное</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Равнодушное"> Равнодушное</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Сердитое"> Сердитое</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Недоверчивое"> Недоверчивое</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="Высокомерное, надменное"> Высокомерное, надменное</label><br>
 
-    <h2>Память</h2>
-    <select name="memory" id="memory" multiple>
-        <option value="Кратковременная память сохранена">Кратковременная память сохранена</option>
-        <option value="Кратковременная память нарушена">Кратковременная память нарушена</option>
-        <option value="Долговременная память сохранена">Долговременная память сохранена</option>
-        <option value="Долговременная память нарушена">Долговременная память нарушена</option>
-    </select>
-    <label>Уточнение: <input type="text" name="memory-detail" placeholder="Введите дополнительную информацию"></label><br>
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="facial-expression-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
 
-    <h2>Критика к состоянию</h2>
-    <select name="criticism" id="criticism" multiple>
-        <option value="Полная">Полная</option>
-        <option value="Частичная">Частичная</option>
-        <option value="Отсутствует">Отсутствует</option>
-    </select>
-    <label>Уточнение: <input type="text" name="criticism-detail" placeholder="Введите дополнительную информацию"></label><br>
+                    <!-- Мимика -->
+                    <section id="mimicry">
+                        <h2>Мимика</h2>
+                        <!-- Варианты ответов -->
+                        <label><input type="checkbox" name="mimicry" value="Естественная"> Естественная</label><br>
+                        <label><input type="checkbox" name="mimicry" value="Живая"> Живая</label><br>
+                        <label><input type="checkbox" name="mimicry" value="Активная"> Активная</label><br>
+                        <label><input type="checkbox" name="mimicry" value="Адекватная теме беседы"> Адекватная теме беседы</label><br>
+                        <label><input type="checkbox" name="mimicry" value="Лабильная"> Лабильная</label><br>
+                        <label><input type="checkbox" name="mimicry" value="Слабо выражена, обеднена"> Слабо выражена, обеднена</label><br>
+                        <label><input type="checkbox" name="mimicry" value="Амимия, маскообразное лицо"> Амимия, маскообразное лицо</label><br>
+                        <label><input type="checkbox" name="mimicry" value="Гипермимия"> Гипермимия</label><br>
+                        <label><input type="checkbox" name="mimicry" value="Мимические движения напоминают гримасы, утрированы"> Мимические движения напоминают гримасы, утрированы</label><br>
+                        <label><input type="checkbox" name="mimicry" value="Галлюцинаторная"> Галлюцинаторная</label><br>
+                        <label><input type="checkbox" name="mimicry" value="Психические автоматизмы"> Психические автоматизмы</label><br>
+                        <label><input type="checkbox" name="mimicry" value="Парамимия"> Парамимия</label><br>
+                        <label><input type="checkbox" name="mimicry" value="Мимика неадекватна теме разговора"> Мимика неадекватна теме разговора</label><br>
+                        <label><input type="checkbox" name="mimicry" value="Мимические движения однообразные"> Мимические движения однообразные</label><br>
 
-    <h2>Соматическое состояние</h2>
-    <label>Артериальное давление: <input type="text" name="bp" placeholder="мм рт. ст."></label><br>
-    <label>Температура тела: <input type="text" name="temperature" placeholder="°C"></label><br>
-    <select name="health" id="health" multiple>
-        <option value="Нормальный сон">Нормальный сон</option>
-        <option value="Бессонница">Бессонница</option>
-        <option value="Гиперсомния">Гиперсомния</option>
-        <option value="Аппетит сохранен">Аппетит сохранен</option>
-        <option value="Аппетит снижен">Аппетит снижен</option>
-        <option value="Аппетит отсутствует">Аппетит отсутствует</option>
-    </select>
-    <label>Уточнение: <input type="text" name="health-detail" placeholder="Введите дополнительную информацию"></label><br>
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="mimicry-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
 
-      <!-- Кнопка для генерации текста -->
-        <button onclick="generateStatus()" class="custom-button">Создать отчет</button>
+                    <!-- Контакт -->
+                    <section id="contact">
+                        <h2>Контакт</h2>
+                        <label><input type="checkbox" name="contact" value="Доступен"> Доступен</label><br>
+                        <label><input type="checkbox" name="contact" value="Недоступен"> Недоступен</label><br>
+                        <label><input type="checkbox" name="contact" value="Доступен формально"> Доступен формально</label><br>
 
-        <!-- Секция для отображения итогового отчета -->
-        <section id="output">
-            <h2>Сгенерированный текст отчета:</h2>
-            <div id="result"></div>
-        </section>
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="contact-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
+
+                    <!-- Ответы на вопросы -->
+                    <section id="answers">
+                        <h2>Ответы на вопросы</h2>
+                        <label><input type="checkbox" name="answers" value="В плане заданного"> В плане заданного</label><br>
+                        <label><input type="checkbox" name="answers" value="Не в плане заданного"> Не в плане заданного</label><br>
+                        <label><input type="checkbox" name="answers" value="Игнорирует суть вопроса"> Игнорирует суть вопроса</label><br>
+                        <label><input type="checkbox" name="answers" value="В беседу вступает охотно"> В беседу вступает охотно</label><br>
+                        <label><input type="checkbox" name="answers" value="В беседу вступает неохотно"> В беседу вступает неохотно</label><br>
+                        <label><input type="checkbox" name="answers" value="Пассивно соглашается на беседу с врачом"> Пассивно соглашается на беседу с врачом</label><br>
+                        <label><input type="checkbox" name="answers" value="На вопросы не отвечает"> На вопросы не отвечает</label><br>
+                        <label><input type="checkbox" name="answers" value="После длинной паузы"> После длинной паузы</label><br>
+                        <label><input type="checkbox" name="answers" value="Отвечает на шепотную речь"> Отвечает на шепотную речь</label><br>
+                        <label><input type="checkbox" name="answers" value="Подробно"> Подробно</label><br>
+                        <label><input type="checkbox" name="answers" value="Коротко, скупо, односложно"> Коротко, скупо, односложно</label><br>
+                        <label><input type="checkbox" name="answers" value="Общается без чувства дистанции, развязно"> Общается без чувства дистанции, развязно</label><br>
+                        <label><input type="checkbox" name="answers" value="С использованием сленговых выражений"> С использованием сленговых выражений</label><br>
+                        <label><input type="checkbox" name="answers" value="Последовательно и связно рассказывает о своих ощущениях, произошедших событиях"> Последовательно и связно рассказывает о своих ощущениях, произошедших событиях</label><br>
+                        <label><input type="checkbox" name="answers" value="Рассказывает малозначимые подробности"> Рассказывает малозначимые подробности</label><br>
+                        <label><input type="checkbox" name="answers" value="Ответы стереотипные, однообразные"> Ответы стереотипные, однообразные</label><br>
+                        <label><input type="checkbox" name="answers" value="Перескакивая с темы на тему"> Перескакивая с темы на тему</label><br>
+                        <label><input type="checkbox" name="answers" value="Соскальзывая на побочные темы"> Соскальзывая на побочные темы</label><br>
+                        <label><input type="checkbox" name="answers" value="Ответы на следующие вопросы с использованием тех же слов, что и на предыдущие вопросы"> Ответы на следующие вопросы с использованием тех же слов, что и на предыдущие вопросы</label><br>
+                        <label><input type="checkbox" name="answers" value="Ритмично (в рифму) повторяет слова или словосочетания"> Ритмично (в рифму) повторяет слова или словосочетания</label><br>
+                        <label><input type="checkbox" name="answers" value="В беседе часто возвращается к стереотипным, однотипным выражениям"> В беседе часто возвращается к стереотипным, однотипным выражениям</label><br>
+                        <label><input type="checkbox" name="answers" value="Непроизвольно повторяет два раза или более последнее слово, фразу или предложение, сказанные им самим (палилалия)"> Непроизвольно повторяет два раза или более последнее слово, фразу или предложение, сказанные им самим (палилалия)</label><br>
+                        <label><input type="checkbox" name="answers" value="Спастическое многократное повторение отдельных слогов произносимого слова (логоклония)"> Спастическое многократное повторение отдельных слогов произносимого слова (логоклония)</label><br>
+                        <label><input type="checkbox" name="answers" value="Рассказывая не о главном в событии, а о случайных фактах, не имеющих значения (формализм)"> Рассказывая не о главном в событии, а о случайных фактах, не имеющих значения (формализм)</label><br>
+                        <label><input type="checkbox" name="answers" value="В общении активен, напорист, перебивает врача"> В общении активен, напорист, перебивает врача</label><br>
+                        <label><input type="checkbox" name="answers" value="Делает нелепые, неуместные замечания присутствующим"> Делает нелепые, неуместные замечания присутствующим</label><br>
+                        <label><input type="checkbox" name="answers" value="Неуместно, нелепо шутит"> Неуместно, нелепо шутит</label><br>
+                        <label><input type="checkbox" name="answers" value="Во время разговора неожиданно замолкает"> Во время разговора неожиданно замолкает</label><br>
+                        <label><input type="checkbox" name="answers" value="С трудом подбирает слова, чтобы описать свое состояние"> С трудом подбирает слова, чтобы описать свое состояние</label><br>
+                        <label><input type="checkbox" name="answers" value="Речь по типу монолога"> Речь по типу монолога</label><br>
+                        <label><input type="checkbox" name="answers" value="С использованием неологизмов"> С использованием неологизмов</label><br>
+
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="answers-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
+
+                    <!-- Восприятие вопросов врача -->
+                    <section id="perception">
+                        <h2>Восприятие вопросов врача</h2>
+                        <label><input type="checkbox" name="perception" value="Спокойно, адекватно"> Спокойно, адекватно</label><br>
+                        <label><input type="checkbox" name="perception" value="Раздражается, отказывается отвечать"> Раздражается, отказывается отвечать</label><br>
+                        <label><input type="checkbox" name="perception" value="С вызовом"> С вызовом</label><br>
+
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="perception-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
+
+                    <!-- Нить разговора и реакция на замечания -->
+                    <section id="conversation-thread">
+                        <h2>Нить разговора и реакция на замечания</h2>
+                        <label><input type="checkbox" name="conversation-thread" value="Держит нить разговора"> Держит нить разговора</label><br>
+                        <label><input type="checkbox" name="conversation-thread" value="Не держит нить разговора"> Не держит нить разговора</label><br>
+
+                        <h3>Реакция на замечания</h3>
+                        <label><input type="checkbox" name="remarks-reaction" value="Адекватно, спокойно"> Адекватно, спокойно</label><br>
+                        <label><input type="checkbox" name="remarks-reaction" value="Реагирует не сразу"> Реагирует не сразу</label><br>
+                        <label><input type="checkbox" name="remarks-reaction" value="Не реагирует"> Не реагирует</label><br>
+                        <label><input type="checkbox" name="remarks-reaction" value="Реагирует агрессивно, раздражается"> Реагирует агрессивно, раздражается</label><br>
+                        <label><input type="checkbox" name="remarks-reaction" value="Считает, что замечание необоснованно, предвзято"> Считает, что замечание необоснованно, предвзято</label><br>
+                        <label><input type="checkbox" name="remarks-reaction" value="Выполняет выборочно, с задержкой"> Выполняет выборочно, с задержкой</label><br>
+
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="conversation-thread-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
+
+                    <!-- Жалобы -->
+                    <section id="complaints">
+                        <h2>Жалобы</h2>
+                        <label><input type="checkbox" name="complaints" value="Не предъявляет"> Не предъявляет</label><br>
+                        <label><input type="checkbox" name="complaints" value="Предъявляет на..."> Предъявляет на...</label><br>
+
+                        <!-- Поле для ввода деталей жалоб -->
+                        <textarea name="complaints-detail" rows="3" class="form-control" placeholder="Уточните жалобы"></textarea>
+                    </section>
+
+                    <!-- Мышление -->
+                    <section id="thinking">
+                        <h2>Мышление</h2>
+                        <label><input type="checkbox" name="thinking" value="Бредовые идеи активно не высказывает"> Бредовые идеи активно не высказывает</label><br>
+                        <!-- Варианты бредовых идей -->
+                        <label><input type="checkbox" name="thinking" value="Бред преследования"> Бред преследования</label><br>
+                        <label><input type="checkbox" name="thinking" value="Бред величия"> Бред величия</label><br>
+                        <label><input type="checkbox" name="thinking" value="Бред богатства"> Бред богатства</label><br>
+                        <label><input type="checkbox" name="thinking" value="Бред высокого происхождения"> Бред высокого происхождения</label><br>
+                        <label><input type="checkbox" name="thinking" value="Бред собственной значимости"> Бред собственной значимости</label><br>
+                        <label><input type="checkbox" name="thinking" value="Бред изобретательства"> Бред изобретательства</label><br>
+                        <label><input type="checkbox" name="thinking" value="Бред ревности"> Бред ревности</label><br>
+                        <label><input type="checkbox" name="thinking" value="Бред вины"> Бред вины</label><br>
+                        <label><input type="checkbox" name="thinking" value="Ипохондрический бред"> Ипохондрический бред</label><br>
+                        <label><input type="checkbox" name="thinking" value="Бред дисморфомании"> Бред дисморфомании</label><br>
+                        <label><input type="checkbox" name="thinking" value="Бред материального ущерба"> Бред материального ущерба</label><br>
+                        <label><input type="checkbox" name="thinking" value="Бред греха"> Бред греха</label><br>
+                        <label><input type="checkbox" name="thinking" value="Религиозный бред"> Религиозный бред</label><br>
+                        <label><input type="checkbox" name="thinking" value="Бред отравления"> Бред отравления</label><br>
+                        <label><input type="checkbox" name="thinking" value="Бред воздействия"> Бред воздействия</label><br>
+                        <label><input type="checkbox" name="thinking" value="Бред отношения"> Бред отношения</label><br>
+                        <label><input type="checkbox" name="thinking" value="Бред особого значения"> Бред особого значения</label><br>
+                        <!-- Добавьте остальные варианты -->
+
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="thinking-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
+
+                    <!-- Восприятие -->
+                    <section id="perception2">
+                        <h2>Восприятие</h2>
+                        <label><input type="checkbox" name="perception2" value="Обманы восприятия не выявляются"> Обманы восприятия не выявляются</label><br>
+                        <label><input type="checkbox" name="perception2" value="Галлюцинации зрительные"> Галлюцинации зрительные</label><br>
+                        <label><input type="checkbox" name="perception2" value="Галлюцинации слуховые"> Галлюцинации слуховые</label><br>
+                        <label><input type="checkbox" name="perception2" value="Галлюцинации тактильные"> Галлюцинации тактильные</label><br>
+                        <label><input type="checkbox" name="perception2" value="Галлюцинации вкусовые"> Галлюцинации вкусовые</label><br>
+                        <label><input type="checkbox" name="perception2" value="Галлюцинации обонятельные"> Галлюцинации обонятельные</label><br>
+                        <label><input type="checkbox" name="perception2" value="Псевдогаллюцинации"> Псевдогаллюцинации</label><br>
+                        <label><input type="checkbox" name="perception2" value="Иллюзии"> Иллюзии</label><br>
+                        <label><input type="checkbox" name="perception2" value="Сенестопатии"> Сенестопатии</label><br>
+                        <label><input type="checkbox" name="perception2" value="Дереализация"> Дереализация</label><br>
+                        <label><input type="checkbox" name="perception2" value="Деперсонализация"> Деперсонализация</label><br>
+
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="perception2-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
+
+                    <!-- Настроение и эмоции -->
+                    <section id="mood-emotions">
+                        <h2>Настроение и эмоции</h2>
+                        <label><input type="checkbox" name="mood-emotions" value="Фон настроения ровный"> Фон настроения ровный</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="Фон настроения неустойчивый"> Фон настроения неустойчивый</label><br>
+                        <!-- Варианты настроения -->
+                        <label><input type="checkbox" name="mood-emotions" value="Гипомания"> Гипомания</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="Мания"> Мания</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="Гневливое"> Гневливое</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="Эйфория"> Эйфория</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="Экстаз"> Экстаз</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="Благодушие"> Благодушие</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="Депрессия"> Депрессия</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="Тревога"> Тревога</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="Страх"> Страх</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="Дисфория"> Дисфория</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="Растерянность"> Растерянность</label><br>
+
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="mood-emotions-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
+
+                    <!-- Внимание -->
+                    <section id="attention">
+                        <h2>Внимание</h2>
+                        <label><input type="checkbox" name="attention" value="Невнимателен в беседе"> Невнимателен в беседе</label><br>
+                        <label><input type="checkbox" name="attention" value="Внимание приковано к..."> Внимание приковано к...</label><br>
+                        <label><input type="checkbox" name="attention" value="Отвлекается на..."> Отвлекается на...</label><br>
+
+                        <!-- Поле для ввода деталей -->
+                        <textarea name="attention-detail" rows="3" class="form-control" placeholder="Уточните"></textarea>
+
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="attention-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
+
+                    <!-- Память -->
+                    <section id="memory">
+                        <h2>Память</h2>
+                        <label><input type="checkbox" name="memory" value="Гипомнезия"> Гипомнезия</label><br>
+                        <label><input type="checkbox" name="memory" value="Гипермнезия"> Гипермнезия</label><br>
+                        <label><input type="checkbox" name="memory" value="Амнезия"> Амнезия</label><br>
+                        <label><input type="checkbox" name="memory" value="Парамнезия"> Парамнезия</label><br>
+
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="memory-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
+
+                    <!-- Критика к состоянию -->
+                    <section id="criticism">
+                        <h2>Критика к состоянию</h2>
+                        <label><input type="checkbox" name="criticism" value="Критика сохранена"> Критика сохранена</label><br>
+                        <label><input type="checkbox" name="criticism" value="Критика снижена"> Критика снижена</label><br>
+                        <label><input type="checkbox" name="criticism" value="Критика отсутствует"> Критика отсутствует</label><br>
+                        <label><input type="checkbox" name="criticism" value="Критика формальная"> Критика формальная</label><br>
+
+                        <!-- Поле для ввода собственного текста -->
+                        <textarea name="criticism-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
+
+                    <!-- Дополнительные заметки -->
+                    <section id="additional-notes">
+                        <h2>Дополнительные заметки</h2>
+                        <textarea name="additional-notes" rows="5" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
+                    </section>
+
+                    <!-- Кнопка для генерации отчета -->
+                    <button onclick="generateStatus()" class="custom-button">Создать отчет</button>
+
+                    <!-- Секция для отображения итогового отчета -->
+                    <section id="output">
+                        <h2>Сгенерированный текст отчета:</h2>
+                        <textarea id="result" rows="15" class="form-control"></textarea>
+                    </section>
+                </div>
+            </main>
+        </div>
     </div>
 
-    <!-- Подключаем jQuery и Bootstrap JavaScript -->
+    <!-- Подключение необходимых скриптов -->
+    <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Подключаем Choices.js JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-
-    <!-- Инициализация Choices.js -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const multiSelects = document.querySelectorAll('select[multiple]');
-            multiSelects.forEach(select => {
-                new Choices(select, {
-                    removeItemButton: true,
-                    placeholder: true,
-                    placeholderValue: 'Выберите варианты'
-                });
-            });
-        });
-    </script>
-
-    <!-- Ваш script.js для генерации текста -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Ваш JavaScript файл -->
     <script src="script.js"></script>
 </body>
 
 </html>
+
