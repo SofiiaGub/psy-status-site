@@ -1,70 +1,246 @@
 function generateStatus() {
+    // Определяем пол пациента
     const gender = document.querySelector('input[name="gender"]:checked').value;
     const pronoun = gender === 'male' ? 'Пациент' : 'Пациентка';
-    const actionVerb = gender === 'male' ? 'пришел' : 'пришла';
+    const actionVerb = gender === 'male' ? 'осмотрен' : 'осмотрена';
+    const possessivePronoun = gender === 'male' ? 'его' : 'её';
+    const reflexivePronoun = 'себя';
+    const verbEnding = gender === 'male' ? '' : 'а';
+    const adjEnding = gender === 'male' ? '' : 'а';
 
-    let report = `${pronoun} ${actionVerb} на осмотр.\n`;
+    let report = `Психический статус\n`;
 
-    // Функция для добавления выбранных значений из выпадающего списка
-    function addMultiSelectSection(selectId, sectionTitle, detailId) {
-        const selectElement = document.getElementById(selectId);
-        const selectedOptions = Array.from(selectElement.selectedOptions).map(option => option.value);
-        const detailText = document.querySelector(`input[name="${detailId}"]`).value;
+    // Ориентировка
+    const orientationTimeOptions = getCheckedOptions('orientation-time');
+    const orientationPlaceOptions = getCheckedOptions('orientation-place');
+    const orientationSelfOptions = getCheckedOptions('orientation-self');
+    const orientationNotes = document.querySelector('textarea[name="orientation-notes"]').value;
 
-        if (selectedOptions.length > 0) {
-            report += `${sectionTitle}: ${selectedOptions.join(', ')}.`;
-            if (detailText) report += ` Дополнительно: ${detailText}.`;
-            report += '\n';
-        }
+    if (orientationTimeOptions.length > 0 || orientationPlaceOptions.length > 0 || orientationSelfOptions.length > 0 || orientationNotes) {
+        report += "Ориентировка: ";
+        if (orientationTimeOptions.length > 0) report += `во времени ${orientationTimeOptions.join(', ')}; `;
+        if (orientationPlaceOptions.length > 0) report += `в месте ${orientationPlaceOptions.join(', ')}; `;
+        if (orientationSelfOptions.length > 0) report += `в собственной личности ${orientationSelfOptions.join(', ')}; `;
+        if (orientationNotes) report += `${orientationNotes}`;
+        report += '\n';
     }
-document.addEventListener('DOMContentLoaded', function () {
-    const multiSelects = document.querySelectorAll('select[multiple]');
-    multiSelects.forEach(select => {
-        new Choices(select, {
-            removeItemButton: true, // Кнопка для удаления выбранных элементов
-            placeholder: true,
-            placeholderValue: 'Выберите варианты',
-        });
-    });
-});
 
-    // Добавляем все разделы в отчет
-    addMultiSelectSection('consciousness', 'Сознание', 'consciousness-detail');
-    addMultiSelectSection('orientation', 'Ориентация', 'orientation-detail');
-    addMultiSelectSection('meeting', 'Как пришел на беседу с врачом', 'meeting-detail');
-    addMultiSelectSection('speech', 'Речь', 'speech-detail');
-    addMultiSelectSection('voice', 'Голос', 'voice-detail');
-    addMultiSelectSection('appearance', 'Внешний вид и Поведение', 'appearance-detail');
-    addMultiSelectSection('posture', 'Поза, жесты и манеры', 'posture-detail');
-    addMultiSelectSection('face', 'Выражение лица и Мимика', 'face-detail');
-    addMultiSelectSection('contact', 'Контакт', 'contact-detail');
-    addMultiSelectSection('answers', 'Ответы на вопросы', 'answers-detail');
-    addMultiSelectSection('perception', 'Восприятие вопросов врача', 'perception-detail');
-    addMultiSelectSection('conversation', 'Нить разговора', 'conversation-detail');
-    addMultiSelectSection('complaints', 'Жалобы', 'complaints-detail');
-    addMultiSelectSection('thinking', 'Нарушение содержания мышления', 'thinking-detail');
-    addMultiSelectSection('associative', 'Нарушение ассоциативного процесса мышления', 'associative-detail');
-    addMultiSelectSection('perception2', 'Нарушение восприятия', 'perception2-detail');
-    addMultiSelectSection('emotions', 'Настроение и Эмоции', 'emotions-detail');
-    addMultiSelectSection('attention', 'Внимание', 'attention-detail');
-    addMultiSelectSection('memory', 'Память', 'memory-detail');
-    addMultiSelectSection('criticism', 'Критика к состоянию', 'criticism-detail');
-
-    // Соматическое состояние с текстовыми полями
-    const bp = document.querySelector('input[name="bp"]').value;
-    const temperature = document.querySelector('input[name="temperature"]').value;
-    const healthOptions = Array.from(document.getElementById('health').selectedOptions).map(option => option.value);
-    const healthDetail = document.querySelector('input[name="health-detail"]').value;
-
-    if (bp || temperature || healthOptions.length > 0) {
-        report += 'Соматическое состояние: ';
-        if (bp) report += `АД: ${bp} мм рт. ст., `;
-        if (temperature) report += `Температура тела: ${temperature}°C, `;
-        if (healthOptions.length > 0) report += `Сон и аппетит: ${healthOptions.join(', ')}`;
-        if (healthDetail) report += `. Дополнительно: ${healthDetail}`;
+    // Внешний вид
+    const appearanceOptions = getCheckedOptions('appearance');
+    const appearanceNotes = document.querySelector('textarea[name="appearance-notes"]').value;
+    if (appearanceOptions.length > 0 || appearanceNotes) {
+        report += `${pronoun} выглядит ${appearanceOptions.join(', ')}`;
+        if (appearanceNotes) report += `. ${appearanceNotes}`;
         report += '.\n';
     }
 
+    // Речь
+    const speechOptions = getCheckedOptions('speech');
+    const speechNotes = document.querySelector('textarea[name="speech-notes"]').value;
+    if (speechOptions.length > 0 || speechNotes) {
+        report += `Речь ${speechOptions.join(', ')}`;
+        if (speechNotes) report += `. ${speechNotes}`;
+        report += '.\n';
+    }
+
+    // Голос
+    const voiceOptions = getCheckedOptions('voice');
+    const voiceNotes = document.querySelector('textarea[name="voice-notes"]').value;
+    if (voiceOptions.length > 0 || voiceNotes) {
+        report += `Голос ${voiceOptions.join(', ')}`;
+        if (voiceNotes) report += `. ${voiceNotes}`;
+        report += '.\n';
+    }
+
+    // Поведение
+    const behaviorOptions = getCheckedOptions('behavior');
+    const behaviorNotes = document.querySelector('textarea[name="behavior-notes"]').value;
+    if (behaviorOptions.length > 0 || behaviorNotes) {
+        report += `Поведение ${behaviorOptions.join(', ')}`;
+        if (behaviorNotes) report += `. ${behaviorNotes}`;
+        report += '.\n';
+    }
+
+    // Движения
+    const movementsOptions = getCheckedOptions('movements');
+    const movementsNotes = document.querySelector('textarea[name="movements-notes"]').value;
+    if (movementsOptions.length > 0 || movementsNotes) {
+        report += `Движения ${movementsOptions.join(', ')}`;
+        if (movementsNotes) report += `. ${movementsNotes}`;
+        report += '.\n';
+    }
+
+    // Поза, жесты и манеры
+    const postureOptions = getCheckedOptions('posture');
+    const postureNotes = document.querySelector('textarea[name="posture-notes"]').value;
+    if (postureOptions.length > 0 || postureNotes) {
+        report += `Поза, жесты и манеры ${postureOptions.join(', ')}`;
+        if (postureNotes) report += `. ${postureNotes}`;
+        report += '.\n';
+    }
+
+    // Выражение лица и контакт глаз
+    const facialExpressionOptions = getCheckedOptions('facial-expression');
+    const facialExpressionNotes = document.querySelector('textarea[name="facial-expression-notes"]').value;
+    if (facialExpressionOptions.length > 0 || facialExpressionNotes) {
+        report += `Выражение лица и контакт глаз ${facialExpressionOptions.join(', ')}`;
+        if (facialExpressionNotes) report += `. ${facialExpressionNotes}`;
+        report += '.\n';
+    }
+
+    // Мимика
+    const mimicryOptions = getCheckedOptions('mimicry');
+    const mimicryNotes = document.querySelector('textarea[name="mimicry-notes"]').value;
+    if (mimicryOptions.length > 0 || mimicryNotes) {
+        report += `Мимика ${mimicryOptions.join(', ')}`;
+        if (mimicryNotes) report += `. ${mimicryNotes}`;
+        report += '.\n';
+    }
+
+    // Контакт
+    const contactOptions = getCheckedOptions('contact');
+    const contactNotes = document.querySelector('textarea[name="contact-notes"]').value;
+    if (contactOptions.length > 0 || contactNotes) {
+        report += `Контакт ${contactOptions.join(', ')}`;
+        if (contactNotes) report += `. ${contactNotes}`;
+        report += '.\n';
+    }
+
+    // Ответы на вопросы
+    const answersOptions = getCheckedOptions('answers');
+    const answersNotes = document.querySelector('textarea[name="answers-notes"]').value;
+    if (answersOptions.length > 0 || answersNotes) {
+        report += `Ответы на вопросы ${answersOptions.join(', ')}`;
+        if (answersNotes) report += `. ${answersNotes}`;
+        report += '.\n';
+    }
+
+    // Восприятие вопросов врача
+    const perceptionOptions = getCheckedOptions('perception');
+    const perceptionNotes = document.querySelector('textarea[name="perception-notes"]').value;
+    if (perceptionOptions.length > 0 || perceptionNotes) {
+        report += `Восприятие вопросов врача ${perceptionOptions.join(', ')}`;
+        if (perceptionNotes) report += `. ${perceptionNotes}`;
+        report += '.\n';
+    }
+
+    // Нить разговора и реакция на замечания
+    const conversationThreadOptions = getCheckedOptions('conversation-thread');
+    const remarksReactionOptions = getCheckedOptions('remarks-reaction');
+    const conversationThreadNotes = document.querySelector('textarea[name="conversation-thread-notes"]').value;
+    if (conversationThreadOptions.length > 0 || remarksReactionOptions.length > 0 || conversationThreadNotes) {
+        report += `Нить разговора ${conversationThreadOptions.join(', ')}`;
+        if (remarksReactionOptions.length > 0) {
+            report += `, реакция на замечания ${remarksReactionOptions.join(', ')}`;
+        }
+        if (conversationThreadNotes) report += `. ${conversationThreadNotes}`;
+        report += '.\n';
+    }
+
+    // Жалобы
+    const complaintsOptions = getCheckedOptions('complaints');
+    const complaintsDetail = document.querySelector('textarea[name="complaints-detail"]').value;
+    if (complaintsOptions.length > 0 || complaintsDetail) {
+        report += `Жалобы ${complaintsOptions.join(', ')}`;
+        if (complaintsDetail) {
+            report += `: ${complaintsDetail}`;
+        }
+        report += '.\n';
+    }
+
+    // Мышление
+    const thinkingOptions = getCheckedOptions('thinking');
+    const thinkingNotes = document.querySelector('textarea[name="thinking-notes"]').value;
+    if (thinkingOptions.length > 0 || thinkingNotes) {
+        report += `Мышление ${thinkingOptions.join(', ')}`;
+        if (thinkingNotes) report += `. ${thinkingNotes}`;
+        report += '.\n';
+    }
+
+    // Восприятие
+    const perception2Options = getCheckedOptions('perception2');
+    const perception2Notes = document.querySelector('textarea[name="perception2-notes"]').value;
+    if (perception2Options.length > 0 || perception2Notes) {
+        report += `Восприятие ${perception2Options.join(', ')}`;
+        if (perception2Notes) report += `. ${perception2Notes}`;
+        report += '.\n';
+    }
+
+    // Настроение и эмоции
+    const moodEmotionsOptions = getCheckedOptions('mood-emotions');
+    const moodEmotionsNotes = document.querySelector('textarea[name="mood-emotions-notes"]').value;
+    if (moodEmotionsOptions.length > 0 || moodEmotionsNotes) {
+        report += `Настроение и эмоции ${moodEmotionsOptions.join(', ')}`;
+        if (moodEmotionsNotes) report += `. ${moodEmotionsNotes}`;
+        report += '.\n';
+    }
+
+    // Внимание
+    const attentionOptions = getCheckedOptions('attention');
+    const attentionDetail = document.querySelector('textarea[name="attention-detail"]').value;
+    const attentionNotes = document.querySelector('textarea[name="attention-notes"]').value;
+    if (attentionOptions.length > 0 || attentionDetail || attentionNotes) {
+        report += `Внимание ${attentionOptions.join(', ')}`;
+        if (attentionDetail) report += `: ${attentionDetail}`;
+        if (attentionNotes) report += `. ${attentionNotes}`;
+        report += '.\n';
+    }
+
+    // Память
+    const memoryOptions = getCheckedOptions('memory');
+    const memoryNotes = document.querySelector('textarea[name="memory-notes"]').value;
+    if (memoryOptions.length > 0 || memoryNotes) {
+        report += `Память ${memoryOptions.join(', ')}`;
+        if (memoryNotes) report += `. ${memoryNotes}`;
+        report += '.\n';
+    }
+
+    // Критика к состоянию
+    const criticismOptions = getCheckedOptions('criticism');
+    const criticismNotes = document.querySelector('textarea[name="criticism-notes"]').value;
+    if (criticismOptions.length > 0 || criticismNotes) {
+        report += `Критика к состоянию ${criticismOptions.join(', ')}`;
+        if (criticismNotes) report += `. ${criticismNotes}`;
+        report += '.\n';
+    }
+
+    // Дополнительные заметки
+    const additionalNotes = document.querySelector('textarea[name="additional-notes"]').value;
+    if (additionalNotes) {
+        report += `${additionalNotes}\n`;
+    }
+
     // Отображение итогового отчета
-    document.getElementById("result").innerText = report;
+    document.getElementById("result").value = report;
+}
+
+// Функция для получения отмеченных опций по имени
+function getCheckedOptions(name) {
+    return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(option => adjustGender(option.value.toLowerCase()));
+}
+
+// Функция для согласования прилагательных и причастий по роду
+function adjustGender(text) {
+    // Словарь для замены окончаний
+    const replacements = {
+        'ый': gender === 'male' ? 'ый' : 'ая',
+        'ий': gender === 'male' ? 'ий' : 'яя',
+        'ен': gender === 'male' ? 'ен' : 'ена',
+        'ан': gender === 'male' ? 'ан' : 'ана',
+        'т': gender === 'male' ? 'т' : 'та',
+        'л': gender === 'male' ? 'л' : 'ла',
+        'еный': gender === 'male' ? 'еный' : 'еная',
+        'анный': gender === 'male' ? 'анный' : 'анная',
+        'ший': gender === 'male' ? 'ший' : 'шая',
+        // Добавьте дополнительные правила по необходимости
+    };
+
+    // Применяем замены
+    for (const [ending, replacement] of Object.entries(replacements)) {
+        if (text.endsWith(ending)) {
+            text = text.slice(0, -ending.length) + replacement;
+            break;
+        }
+    }
+    return text;
 }
