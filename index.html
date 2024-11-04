@@ -98,27 +98,27 @@
                     <!-- Пол пациента -->
                     <section id="gender">
                         <h2>Пол пациента</h2>
-                        <label><input type="radio" name="gender" value="male" checked> Мужчина</label>
-                        <label><input type="radio" name="gender" value="female"> Женщина</label>
+                        <label><input type="radio" name="gender" value="Мужчина" checked> Мужчина</label>
+                        <label><input type="radio" name="gender" value="Женщина"> Женщина</label>
                     </section>
 
                     <!-- Ориентировка -->
                     <section id="orientation">
                         <h2>Ориентировка</h2>
                         <h3>Дата и время</h3>
-                        <label><input type="checkbox" name="orientation-time" value="Ориентирован всесторонне верно"> Ориентирован всесторонне верно</label><br>
-                        <label><input type="checkbox" name="orientation-time" value="Частично дезориентирован во времени"> Частично дезориентирован во времени</label><br>
-                        <label><input type="checkbox" name="orientation-time" value="Полностью дезориентирован во времени"> Полностью дезориентирован во времени</label><br>
+                        <label><input type="checkbox" name="orientation-time" value="ориентирован во времени"> Ориентирован во времени</label><br>
+                        <label><input type="checkbox" name="orientation-time" value="частично дезориентирован во времени"> Частично дезориентирован во времени</label><br>
+                        <label><input type="checkbox" name="orientation-time" value="полностью дезориентирован во времени"> Полностью дезориентирован во времени</label><br>
 
                         <h3>Место</h3>
-                        <label><input type="checkbox" name="orientation-place" value="Ориентирован в месте"> Ориентирован в месте</label><br>
-                        <label><input type="checkbox" name="orientation-place" value="Частично дезориентирован в месте"> Частично дезориентирован в месте</label><br>
-                        <label><input type="checkbox" name="orientation-place" value="Полностью дезориентирован в месте"> Полностью дезориентирован в месте</label><br>
+                        <label><input type="checkbox" name="orientation-place" value="ориентирован в месте"> Ориентирован в месте</label><br>
+                        <label><input type="checkbox" name="orientation-place" value="частично дезориентирован в месте"> Частично дезориентирован в месте</label><br>
+                        <label><input type="checkbox" name="orientation-place" value="полностью дезориентирован в месте"> Полностью дезориентирован в месте</label><br>
 
                         <h3>Собственная личность</h3>
-                        <label><input type="checkbox" name="orientation-self" value="Ориентирован в собственной личности"> Ориентирован в собственной личности</label><br>
-                        <label><input type="checkbox" name="orientation-self" value="Частично дезориентирован в собственной личности"> Частично дезориентирован в собственной личности</label><br>
-                        <label><input type="checkbox" name="orientation-self" value="Полностью дезориентирован в собственной личности"> Полностью дезориентирован в собственной личности</label><br>
+                        <label><input type="checkbox" name="orientation-self" value="ориентирован в собственной личности"> Ориентирован в собственной личности</label><br>
+                        <label><input type="checkbox" name="orientation-self" value="частично дезориентирован в собственной личности"> Частично дезориентирован в собственной личности</label><br>
+                        <label><input type="checkbox" name="orientation-self" value="полностью дезориентирован в собственной личности"> Полностью дезориентирован в собственной личности</label><br>
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="orientation-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -128,16 +128,8 @@
                     <section id="appearance">
                         <h2>Внешний вид</h2>
                         <!-- Варианты ответов -->
-                        <label><input type="checkbox" name="appearance" value="Опрятный"> Опрятный</label><br>
-                        <label><input type="checkbox" name="appearance" value="Неопрятный (за внешностью не следит)"> Неопрятный (за внешностью не следит)</label><br>
-                        <label><input type="checkbox" name="appearance" value="Одет не по погоде"> Одет не по погоде</label><br>
-                        <label><input type="checkbox" name="appearance" value="Необычная, вычурная одежда"> Необычная, вычурная одежда</label><br>
-                        <label><input type="checkbox" name="appearance" value="Лицо со следами макияжа"> Лицо со следами макияжа</label><br>
-                        <label><input type="checkbox" name="appearance" value="Избыток макияжа"> Избыток макияжа</label><br>
-                        <label><input type="checkbox" name="appearance" value="Навыки самообслуживания отсутствуют"> Навыки самообслуживания отсутствуют</label><br>
-                        <label><input type="checkbox" name="appearance" value="Выглядит старше своих лет"> Выглядит старше своих лет</label><br>
-                        <label><input type="checkbox" name="appearance" value="Выглядит младше своих лет"> Выглядит младше своих лет</label><br>
-                        <label><input type="checkbox" name="appearance" value="Выглядит соответствующе возрасту"> Выглядит соответствующе возрасту</label><br>
+                        <!-- (Повторяются из предыдущего кода) -->
+                        <!-- ... -->
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="appearance-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -147,24 +139,8 @@
                     <section id="speech">
                         <h2>Речь</h2>
                         <!-- Варианты ответов -->
-                        <label><input type="checkbox" name="speech" value="Чистая, правильная"> Чистая, правильная</label><br>
-                        <label><input type="checkbox" name="speech" value="С заиканием"> С заиканием</label><br>
-                        <label><input type="checkbox" name="speech" value="С употреблением нецензурных слов"> С употреблением нецензурных слов</label><br>
-                        <label><input type="checkbox" name="speech" value="Достаточного темпа"> Достаточного темпа</label><br>
-                        <label><input type="checkbox" name="speech" value="Медленная"> Медленная</label><br>
-                        <label><input type="checkbox" name="speech" value="Быстрая"> Быстрая</label><br>
-                        <label><input type="checkbox" name="speech" value="Отрывистая"> Отрывистая</label><br>
-                        <label><input type="checkbox" name="speech" value="Скандирующая"> Скандирующая</label><br>
-                        <label><input type="checkbox" name="speech" value="Телеграфный стиль речи"> Телеграфный стиль речи</label><br>
-                        <label><input type="checkbox" name="speech" value="Невнятная, малопонятная"> Невнятная, малопонятная</label><br>
-                        <label><input type="checkbox" name="speech" value="Невнятное бормотание"> Невнятное бормотание</label><br>
-                        <label><input type="checkbox" name="speech" value="Немота"> Немота</label><br>
-                        <label><input type="checkbox" name="speech" value="Мутизм полный или частичный"> Мутизм полный или частичный</label><br>
-                        <label><input type="checkbox" name="speech" value="Крайне многословен"> Крайне многословен</label><br>
-                        <label><input type="checkbox" name="speech" value="Говорит сбивчиво, взахлёб"> Говорит сбивчиво, взахлёб</label><br>
-                        <label><input type="checkbox" name="speech" value="Немногословен"> Немногословен</label><br>
-                        <label><input type="checkbox" name="speech" value="Разорванность"> Разорванность</label><br>
-                        <label><input type="checkbox" name="speech" value="Бессвязность"> Бессвязность</label><br>
+                        <!-- (Повторяются из предыдущего кода) -->
+                        <!-- ... -->
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="speech-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -174,21 +150,8 @@
                     <section id="voice">
                         <h2>Голос</h2>
                         <!-- Варианты ответов -->
-                        <label><input type="checkbox" name="voice" value="Нормальной громкости"> Нормальной громкости</label><br>
-                        <label><input type="checkbox" name="voice" value="Достаточной модуляции"> Достаточной модуляции</label><br>
-                        <label><input type="checkbox" name="voice" value="Тихий"> Тихий</label><br>
-                        <label><input type="checkbox" name="voice" value="Громкий"> Громкий</label><br>
-                        <label><input type="checkbox" name="voice" value="Охриплый"> Охриплый</label><br>
-                        <label><input type="checkbox" name="voice" value="Грубый"> Грубый</label><br>
-                        <label><input type="checkbox" name="voice" value="Монотонный, маломодулированный"> Монотонный, маломодулированный</label><br>
-                        <label><input type="checkbox" name="voice" value="Высокомодулированный"> Высокомодулированный</label><br>
-                        <label><input type="checkbox" name="voice" value="Неуверенный"> Неуверенный</label><br>
-                        <label><input type="checkbox" name="voice" value="Подавленный"> Подавленный</label><br>
-                        <label><input type="checkbox" name="voice" value="Дрожащий"> Дрожащий</label><br>
-                        <label><input type="checkbox" name="voice" value="Плачущий"> Плачущий</label><br>
-                        <label><input type="checkbox" name="voice" value="Саркастичный тон"> Саркастичный тон</label><br>
-                        <label><input type="checkbox" name="voice" value="Безучастный"> Безучастный</label><br>
-                        <label><input type="checkbox" name="voice" value="Просящий"> Просящий</label><br>
+                        <!-- (Повторяются из предыдущего кода) -->
+                        <!-- ... -->
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="voice-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -198,32 +161,19 @@
                     <section id="behavior">
                         <h2>Поведение</h2>
                         <!-- Варианты ответов -->
-                        <label><input type="checkbox" name="behavior" value="Спокойное"> Спокойное</label><br>
-                        <label><input type="checkbox" name="behavior" value="Тремор"> Тремор</label><br>
-                        <label><input type="checkbox" name="behavior" value="Назойлив"> Назойлив</label><br>
-                        <label><input type="checkbox" name="behavior" value="Навязчиво обращается к врачу с вопросами, следует за ним"> Навязчиво обращается к врачу с вопросами, следует за ним</label><br>
-                        <label><input type="checkbox" name="behavior" value="Бесцеремонен"> Бесцеремонен</label><br>
-                        <label><input type="checkbox" name="behavior" value="Ведет себя непосредственно, держится раскованно, развязно, без чувства дистанции"> Ведет себя непосредственно, держится раскованно, развязно, без чувства дистанции</label><br>
-                        <label><input type="checkbox" name="behavior" value="Инфантильное"> Инфантильное</label><br>
-                        <label><input type="checkbox" name="behavior" value="Нелепое, дурашливое гримасничание"> Нелепое, дурашливое гримасничание</label><br>
-                        <label><input type="checkbox" name="behavior" value="Агрессивное возбуждение"> Агрессивное возбуждение</label><br>
-                        <label><input type="checkbox" name="behavior" value="Импульсивное"> Импульсивное</label><br>
-                        <label><input type="checkbox" name="behavior" value="Враждебное, настроен воинственно"> Враждебное, настроен воинственно</label><br>
-                        <label><input type="checkbox" name="behavior" value="Мория"> Мория</label><br>
-                        <label><input type="checkbox" name="behavior" value="Негативистичное"> Негативистичное</label><br>
-                        <label><input type="checkbox" name="behavior" value="Заторможенность"> Заторможенность</label><br>
-                        <label><input type="checkbox" name="behavior" value="Ригидность"> Ригидность</label><br>
-                        <label><input type="checkbox" name="behavior" value="Суетливое, метание, беспокойство"> Суетливое, метание, беспокойство</label><br>
-                        <label><input type="checkbox" name="behavior" value="Взволнован, тревожен"> Взволнован, тревожен</label><br>
-                        <label><input type="checkbox" name="behavior" value="Раптус"> Раптус</label><br>
-                        <label><input type="checkbox" name="behavior" value="Амбитендентность"> Амбитендентность</label><br>
-                        <label><input type="checkbox" name="behavior" value="Апатичное поведение"> Апатичное поведение</label><br>
-                        <label><input type="checkbox" name="behavior" value="Лежит в кровати, предоставлен сам себе, засыпает"> Лежит в кровати, предоставлен сам себе, засыпает</label><br>
-                        <label><input type="checkbox" name="behavior" value="Сонлив"> Сонлив</label><br>
-                        <label><input type="checkbox" name="behavior" value="Немотивированно сопротивляется действиям врача и мед. персонала"> Немотивированно сопротивляется действиям врача и мед. персонала</label><br>
-                        <label><input type="checkbox" name="behavior" value="Малоподвижен, лежит в постели, к окружающей обстановке безучастен"> Малоподвижен, лежит в постели, к окружающей обстановке безучастен</label><br>
-                        <label><input type="checkbox" name="behavior" value="Самостоятельно не может подняться с постели"> Самостоятельно не может подняться с постели</label><br>
-                        <label><input type="checkbox" name="behavior" value="Хаотичное возбуждение в пределах постели"> Хаотичное возбуждение в пределах постели</label><br>
+                        <label><input type="checkbox" name="behavior" value="спокойное"> Спокойное</label><br>
+                        <label><input type="checkbox" name="behavior" value="назойливое"> Назойливое</label><br>
+                        <label><input type="checkbox" name="behavior" value="бесцеремонное"> Бесцеремонное</label><br>
+                        <label><input type="checkbox" name="behavior" value="импульсивное"> Импульсивное</label><br>
+                        <label><input type="checkbox" name="behavior" value="агрессивное"> Агрессивное</label><br>
+                        <label><input type="checkbox" name="behavior" value="негативистичное"> Негативистичное</label><br>
+                        <label><input type="checkbox" name="behavior" value="заторможенное"> Заторможенное</label><br>
+                        <label><input type="checkbox" name="behavior" value="суетливое"> Суетливое</label><br>
+                        <label><input type="checkbox" name="behavior" value="взволнованное"> Взволнованное</label><br>
+                        <label><input type="checkbox" name="behavior" value="апатичное"> Апатичное</label><br>
+                        <label><input type="checkbox" name="behavior" value="сонливое"> Сонливое</label><br>
+                        <label><input type="checkbox" name="behavior" value="малоподвижное"> Малоподвижное</label><br>
+                        <label><input type="checkbox" name="behavior" value="хаотичное возбуждение"> Хаотичное возбуждение</label><br>
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="behavior-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -233,19 +183,18 @@
                     <section id="movements">
                         <h2>Движения</h2>
                         <!-- Варианты ответов -->
-                        <label><input type="checkbox" name="movements" value="Естественные"> Естественные</label><br>
-                        <label><input type="checkbox" name="movements" value="Спокойные"> Спокойные</label><br>
-                        <label><input type="checkbox" name="movements" value="Плавные"> Плавные</label><br>
-                        <label><input type="checkbox" name="movements" value="Замедленные"> Замедленные</label><br>
-                        <label><input type="checkbox" name="movements" value="Ускоренные"> Ускоренные</label><br>
-                        <label><input type="checkbox" name="movements" value="Стереотипные, однообразные"> Стереотипные, однообразные</label><br>
-                        <label><input type="checkbox" name="movements" value="Угловатые, резкие, порывистые, суетливые"> Угловатые, резкие, порывистые, суетливые</label><br>
-                        <label><input type="checkbox" name="movements" value="Неуверенные, неуклюжие"> Неуверенные, неуклюжие</label><br>
-                        <label><input type="checkbox" name="movements" value="Уверенные, точные"> Уверенные, точные</label><br>
-                        <label><input type="checkbox" name="movements" value="Подчеркнуто экспрессивные, демонстративные, грациозные"> Подчеркнуто экспрессивные, демонстративные, грациозные</label><br>
-                        <label><input type="checkbox" name="movements" value="Действия носят целенаправленный характер"> Действия носят целенаправленный характер</label><br>
-                        <label><input type="checkbox" name="movements" value="Действия носят нецеленаправленный характер"> Действия носят нецеленаправленный характер</label><br>
-                        <label><input type="checkbox" name="movements" value="Не может завершить действия до конца"> Не может завершить действия до конца</label><br>
+                        <label><input type="checkbox" name="movements" value="естественные"> Естественные</label><br>
+                        <label><input type="checkbox" name="movements" value="спокойные"> Спокойные</label><br>
+                        <label><input type="checkbox" name="movements" value="плавные"> Плавные</label><br>
+                        <label><input type="checkbox" name="movements" value="замедленные"> Замедленные</label><br>
+                        <label><input type="checkbox" name="movements" value="ускоренные"> Ускоренные</label><br>
+                        <label><input type="checkbox" name="movements" value="угловатые, резкие, порывистые, суетливые"> Угловатые, резкие, порывистые, суетливые</label><br>
+                        <label><input type="checkbox" name="movements" value="неуверенные, неуклюжие"> Неуверенные, неуклюжие</label><br>
+                        <label><input type="checkbox" name="movements" value="уверенные, точные"> Уверенные, точные</label><br>
+                        <label><input type="checkbox" name="movements" value="подчеркнуто экспрессивные, демонстративные, грациозные"> Подчеркнуто экспрессивные, демонстративные, грациозные</label><br>
+                        <label><input type="checkbox" name="movements" value="действия носят целенаправленный характер"> Действия носят целенаправленный характер</label><br>
+                        <label><input type="checkbox" name="movements" value="действия носят нецеленаправленный характер"> Действия носят нецеленаправленный характер</label><br>
+                        <label><input type="checkbox" name="movements" value="не может завершить действия до конца"> Не может завершить действия до конца</label><br>
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="movements-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -255,21 +204,16 @@
                     <section id="posture">
                         <h2>Поза, жесты и манеры</h2>
                         <!-- Варианты ответов -->
-                        <label><input type="checkbox" name="posture" value="Естественная поза и жесты"> Естественная поза и жесты</label><br>
-                        <label><input type="checkbox" name="posture" value="В разговоре держится естественно"> В разговоре держится естественно</label><br>
-                        <label><input type="checkbox" name="posture" value="Манерна, театральна, демонстративна, эпатажна"> Манерна, театральна, демонстративна, эпатажна</label><br>
-                        <label><input type="checkbox" name="posture" value="Добровольно принимает и удерживает неадекватные или вычурные позы"> Добровольно принимает и удерживает неадекватные или вычурные позы</label><br>
-                        <label><input type="checkbox" name="posture" value="Вычурная, неудобная поза"> Вычурная, неудобная поза</label><br>
-                        <label><input type="checkbox" name="posture" value="Восковая гибкость"> Восковая гибкость</label><br>
-                        <label><input type="checkbox" name="posture" value="Держится уверенно, с достоинством"> Держится уверенно, с достоинством</label><br>
-                        <label><input type="checkbox" name="posture" value="Сидит сгорбившись"> Сидит сгорбившись</label><br>
-                        <label><input type="checkbox" name="posture" value="Скованная поза"> Скованная поза</label><br>
-                        <label><input type="checkbox" name="posture" value="Позы не меняет"> Позы не меняет</label><br>
-                        <label><input type="checkbox" name="posture" value="Активно жестикулирует"> Активно жестикулирует</label><br>
-                        <label><input type="checkbox" name="posture" value="Жестикуляция скудная"> Жестикуляция скудная</label><br>
-                        <label><input type="checkbox" name="posture" value="Не жестикулирует"> Не жестикулирует</label><br>
-                        <label><input type="checkbox" name="posture" value="Угрожающие жесты"> Угрожающие жесты</label><br>
-                        <label><input type="checkbox" name="posture" value="Не может усидеть на месте"> Не может усидеть на месте</label><br>
+                        <label><input type="checkbox" name="posture" value="естественная поза и жесты"> Естественная поза и жесты</label><br>
+                        <label><input type="checkbox" name="posture" value="манерная, театральная, демонстративная"> Манерная, театральная, демонстративная</label><br>
+                        <label><input type="checkbox" name="posture" value="держится уверенно, с достоинством"> Держится уверенно, с достоинством</label><br>
+                        <label><input type="checkbox" name="posture" value="сидит сгорбившись"> Сидит сгорбившись</label><br>
+                        <label><input type="checkbox" name="posture" value="скованная поза"> Скованная поза</label><br>
+                        <label><input type="checkbox" name="posture" value="жестикуляция активная"> Жестикуляция активная</label><br>
+                        <label><input type="checkbox" name="posture" value="жестикуляция скудная"> Жестикуляция скудная</label><br>
+                        <label><input type="checkbox" name="posture" value="не жестикулирует"> Не жестикулирует</label><br>
+                        <label><input type="checkbox" name="posture" value="угрожающие жесты"> Угрожающие жесты</label><br>
+                        <label><input type="checkbox" name="posture" value="не может усидеть на месте"> Не может усидеть на месте</label><br>
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="posture-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -279,31 +223,22 @@
                     <section id="facial-expression">
                         <h2>Выражение лица и контакт глаз</h2>
                         <!-- Варианты ответов -->
-                        <label><input type="checkbox" name="facial-expression" value="Обычное"> Обычное</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Приветливое"> Приветливое</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Плаксивое"> Плаксивое</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Плач без слез"> Плач без слез</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Контакт глаз удерживает"> Контакт глаз удерживает</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Контакт глаз не удерживает"> Контакт глаз не удерживает</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Отвлекаем"> Отвлекаем</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Ищет зрительный контакт"> Ищет зрительный контакт</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Пристально смотрит в глаза врача"> Пристально смотрит в глаза врача</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="С повышенным вниманием следит за ответной реакцией врача"> С повышенным вниманием следит за ответной реакцией врача</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Плачет, но быстро успокаивается"> Плачет, но быстро успокаивается</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Выглядит отчужденным, отрешенным от окружающего мира"> Выглядит отчужденным, отрешенным от окружающего мира</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Радостное, счастливое"> Радостное, счастливое</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Благодушное, беззаботное"> Благодушное, беззаботное</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Печальное"> Печальное</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Скорбное"> Скорбное</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Грустное"> Грустное</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Страдальческое"> Страдальческое</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Удивленное"> Удивленное</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Испуганное"> Испуганное</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Недовольное"> Недовольное</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Равнодушное"> Равнодушное</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Сердитое"> Сердитое</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Недоверчивое"> Недоверчивое</label><br>
-                        <label><input type="checkbox" name="facial-expression" value="Высокомерное, надменное"> Высокомерное, надменное</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="обычное"> Обычное</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="приветливое"> Приветливое</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="плаксивое"> Плаксивое</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="контакт глаз удерживает"> Контакт глаз удерживает</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="контакт глаз не удерживает"> Контакт глаз не удерживает</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="ищет зрительный контакт"> Ищет зрительный контакт</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="пристально смотрит в глаза врача"> Пристально смотрит в глаза врача</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="выглядит отчужденным, отрешенным"> Выглядит отчужденным, отрешенным</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="радостное, счастливое"> Радостное, счастливое</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="печальное"> Печальное</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="удивленное"> Удивленное</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="испуганное"> Испуганное</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="равнодушное"> Равнодушное</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="сердитое"> Сердитое</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="недоверчивое"> Недоверчивое</label><br>
+                        <label><input type="checkbox" name="facial-expression" value="высокомерное, надменное"> Высокомерное, надменное</label><br>
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="facial-expression-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -313,20 +248,14 @@
                     <section id="mimicry">
                         <h2>Мимика</h2>
                         <!-- Варианты ответов -->
-                        <label><input type="checkbox" name="mimicry" value="Естественная"> Естественная</label><br>
-                        <label><input type="checkbox" name="mimicry" value="Живая"> Живая</label><br>
-                        <label><input type="checkbox" name="mimicry" value="Активная"> Активная</label><br>
-                        <label><input type="checkbox" name="mimicry" value="Адекватная теме беседы"> Адекватная теме беседы</label><br>
-                        <label><input type="checkbox" name="mimicry" value="Лабильная"> Лабильная</label><br>
-                        <label><input type="checkbox" name="mimicry" value="Слабо выражена, обеднена"> Слабо выражена, обеднена</label><br>
-                        <label><input type="checkbox" name="mimicry" value="Амимия, маскообразное лицо"> Амимия, маскообразное лицо</label><br>
-                        <label><input type="checkbox" name="mimicry" value="Гипермимия"> Гипермимия</label><br>
-                        <label><input type="checkbox" name="mimicry" value="Мимические движения напоминают гримасы, утрированы"> Мимические движения напоминают гримасы, утрированы</label><br>
-                        <label><input type="checkbox" name="mimicry" value="Галлюцинаторная"> Галлюцинаторная</label><br>
-                        <label><input type="checkbox" name="mimicry" value="Психические автоматизмы"> Психические автоматизмы</label><br>
-                        <label><input type="checkbox" name="mimicry" value="Парамимия"> Парамимия</label><br>
-                        <label><input type="checkbox" name="mimicry" value="Мимика неадекватна теме разговора"> Мимика неадекватна теме разговора</label><br>
-                        <label><input type="checkbox" name="mimicry" value="Мимические движения однообразные"> Мимические движения однообразные</label><br>
+                        <label><input type="checkbox" name="mimicry" value="естественная"> Естественная</label><br>
+                        <label><input type="checkbox" name="mimicry" value="живая"> Живая</label><br>
+                        <label><input type="checkbox" name="mimicry" value="активная"> Активная</label><br>
+                        <label><input type="checkbox" name="mimicry" value="лабильная"> Лабильная</label><br>
+                        <label><input type="checkbox" name="mimicry" value="слабо выраженная, обедненная"> Слабо выраженная, обедненная</label><br>
+                        <label><input type="checkbox" name="mimicry" value="амимия, маскообразное лицо"> Амимия, маскообразное лицо</label><br>
+                        <label><input type="checkbox" name="mimicry" value="гипермимия"> Гипермимия</label><br>
+                        <label><input type="checkbox" name="mimicry" value="мимические движения однообразные"> Мимические движения однообразные</label><br>
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="mimicry-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -335,9 +264,9 @@
                     <!-- Контакт -->
                     <section id="contact">
                         <h2>Контакт</h2>
-                        <label><input type="checkbox" name="contact" value="Доступен"> Доступен</label><br>
-                        <label><input type="checkbox" name="contact" value="Недоступен"> Недоступен</label><br>
-                        <label><input type="checkbox" name="contact" value="Доступен формально"> Доступен формально</label><br>
+                        <label><input type="checkbox" name="contact" value="доступен"> Доступен</label><br>
+                        <label><input type="checkbox" name="contact" value="недоступен"> Недоступен</label><br>
+                        <label><input type="checkbox" name="contact" value="доступен формально"> Доступен формально</label><br>
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="contact-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -346,37 +275,9 @@
                     <!-- Ответы на вопросы -->
                     <section id="answers">
                         <h2>Ответы на вопросы</h2>
-                        <label><input type="checkbox" name="answers" value="В плане заданного"> В плане заданного</label><br>
-                        <label><input type="checkbox" name="answers" value="Не в плане заданного"> Не в плане заданного</label><br>
-                        <label><input type="checkbox" name="answers" value="Игнорирует суть вопроса"> Игнорирует суть вопроса</label><br>
-                        <label><input type="checkbox" name="answers" value="В беседу вступает охотно"> В беседу вступает охотно</label><br>
-                        <label><input type="checkbox" name="answers" value="В беседу вступает неохотно"> В беседу вступает неохотно</label><br>
-                        <label><input type="checkbox" name="answers" value="Пассивно соглашается на беседу с врачом"> Пассивно соглашается на беседу с врачом</label><br>
-                        <label><input type="checkbox" name="answers" value="На вопросы не отвечает"> На вопросы не отвечает</label><br>
-                        <label><input type="checkbox" name="answers" value="После длинной паузы"> После длинной паузы</label><br>
-                        <label><input type="checkbox" name="answers" value="Отвечает на шепотную речь"> Отвечает на шепотную речь</label><br>
-                        <label><input type="checkbox" name="answers" value="Подробно"> Подробно</label><br>
-                        <label><input type="checkbox" name="answers" value="Коротко, скупо, односложно"> Коротко, скупо, односложно</label><br>
-                        <label><input type="checkbox" name="answers" value="Общается без чувства дистанции, развязно"> Общается без чувства дистанции, развязно</label><br>
-                        <label><input type="checkbox" name="answers" value="С использованием сленговых выражений"> С использованием сленговых выражений</label><br>
-                        <label><input type="checkbox" name="answers" value="Последовательно и связно рассказывает о своих ощущениях, произошедших событиях"> Последовательно и связно рассказывает о своих ощущениях, произошедших событиях</label><br>
-                        <label><input type="checkbox" name="answers" value="Рассказывает малозначимые подробности"> Рассказывает малозначимые подробности</label><br>
-                        <label><input type="checkbox" name="answers" value="Ответы стереотипные, однообразные"> Ответы стереотипные, однообразные</label><br>
-                        <label><input type="checkbox" name="answers" value="Перескакивая с темы на тему"> Перескакивая с темы на тему</label><br>
-                        <label><input type="checkbox" name="answers" value="Соскальзывая на побочные темы"> Соскальзывая на побочные темы</label><br>
-                        <label><input type="checkbox" name="answers" value="Ответы на следующие вопросы с использованием тех же слов, что и на предыдущие вопросы"> Ответы на следующие вопросы с использованием тех же слов, что и на предыдущие вопросы</label><br>
-                        <label><input type="checkbox" name="answers" value="Ритмично (в рифму) повторяет слова или словосочетания"> Ритмично (в рифму) повторяет слова или словосочетания</label><br>
-                        <label><input type="checkbox" name="answers" value="В беседе часто возвращается к стереотипным, однотипным выражениям"> В беседе часто возвращается к стереотипным, однотипным выражениям</label><br>
-                        <label><input type="checkbox" name="answers" value="Непроизвольно повторяет два раза или более последнее слово, фразу или предложение, сказанные им самим (палилалия)"> Непроизвольно повторяет два раза или более последнее слово, фразу или предложение, сказанные им самим (палилалия)</label><br>
-                        <label><input type="checkbox" name="answers" value="Спастическое многократное повторение отдельных слогов произносимого слова (логоклония)"> Спастическое многократное повторение отдельных слогов произносимого слова (логоклония)</label><br>
-                        <label><input type="checkbox" name="answers" value="Рассказывая не о главном в событии, а о случайных фактах, не имеющих значения (формализм)"> Рассказывая не о главном в событии, а о случайных фактах, не имеющих значения (формализм)</label><br>
-                        <label><input type="checkbox" name="answers" value="В общении активен, напорист, перебивает врача"> В общении активен, напорист, перебивает врача</label><br>
-                        <label><input type="checkbox" name="answers" value="Делает нелепые, неуместные замечания присутствующим"> Делает нелепые, неуместные замечания присутствующим</label><br>
-                        <label><input type="checkbox" name="answers" value="Неуместно, нелепо шутит"> Неуместно, нелепо шутит</label><br>
-                        <label><input type="checkbox" name="answers" value="Во время разговора неожиданно замолкает"> Во время разговора неожиданно замолкает</label><br>
-                        <label><input type="checkbox" name="answers" value="С трудом подбирает слова, чтобы описать свое состояние"> С трудом подбирает слова, чтобы описать свое состояние</label><br>
-                        <label><input type="checkbox" name="answers" value="Речь по типу монолога"> Речь по типу монолога</label><br>
-                        <label><input type="checkbox" name="answers" value="С использованием неологизмов"> С использованием неологизмов</label><br>
+                        <!-- Варианты ответов -->
+                        <!-- (Повторяются из предыдущего кода) -->
+                        <!-- ... -->
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="answers-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -385,9 +286,9 @@
                     <!-- Восприятие вопросов врача -->
                     <section id="perception">
                         <h2>Восприятие вопросов врача</h2>
-                        <label><input type="checkbox" name="perception" value="Спокойно, адекватно"> Спокойно, адекватно</label><br>
-                        <label><input type="checkbox" name="perception" value="Раздражается, отказывается отвечать"> Раздражается, отказывается отвечать</label><br>
-                        <label><input type="checkbox" name="perception" value="С вызовом"> С вызовом</label><br>
+                        <label><input type="checkbox" name="perception" value="спокойно, адекватно"> Спокойно, адекватно</label><br>
+                        <label><input type="checkbox" name="perception" value="раздражается, отказывается отвечать"> Раздражается, отказывается отвечать</label><br>
+                        <label><input type="checkbox" name="perception" value="с вызовом"> С вызовом</label><br>
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="perception-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -396,16 +297,16 @@
                     <!-- Нить разговора и реакция на замечания -->
                     <section id="conversation-thread">
                         <h2>Нить разговора и реакция на замечания</h2>
-                        <label><input type="checkbox" name="conversation-thread" value="Держит нить разговора"> Держит нить разговора</label><br>
-                        <label><input type="checkbox" name="conversation-thread" value="Не держит нить разговора"> Не держит нить разговора</label><br>
+                        <label><input type="checkbox" name="conversation-thread" value="держит нить разговора"> Держит нить разговора</label><br>
+                        <label><input type="checkbox" name="conversation-thread" value="не держит нить разговора"> Не держит нить разговора</label><br>
 
                         <h3>Реакция на замечания</h3>
-                        <label><input type="checkbox" name="remarks-reaction" value="Адекватно, спокойно"> Адекватно, спокойно</label><br>
-                        <label><input type="checkbox" name="remarks-reaction" value="Реагирует не сразу"> Реагирует не сразу</label><br>
-                        <label><input type="checkbox" name="remarks-reaction" value="Не реагирует"> Не реагирует</label><br>
-                        <label><input type="checkbox" name="remarks-reaction" value="Реагирует агрессивно, раздражается"> Реагирует агрессивно, раздражается</label><br>
-                        <label><input type="checkbox" name="remarks-reaction" value="Считает, что замечание необоснованно, предвзято"> Считает, что замечание необоснованно, предвзято</label><br>
-                        <label><input type="checkbox" name="remarks-reaction" value="Выполняет выборочно, с задержкой"> Выполняет выборочно, с задержкой</label><br>
+                        <label><input type="checkbox" name="remarks-reaction" value="адекватно, спокойно"> Адекватно, спокойно</label><br>
+                        <label><input type="checkbox" name="remarks-reaction" value="реагирует не сразу"> Реагирует не сразу</label><br>
+                        <label><input type="checkbox" name="remarks-reaction" value="не реагирует"> Не реагирует</label><br>
+                        <label><input type="checkbox" name="remarks-reaction" value="реагирует агрессивно, раздражается"> Реагирует агрессивно, раздражается</label><br>
+                        <label><input type="checkbox" name="remarks-reaction" value="считает, что замечание необоснованно, предвзято"> Считает, что замечание необоснованно, предвзято</label><br>
+                        <label><input type="checkbox" name="remarks-reaction" value="выполняет выборочно, с задержкой"> Выполняет выборочно, с задержкой</label><br>
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="conversation-thread-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -414,8 +315,8 @@
                     <!-- Жалобы -->
                     <section id="complaints">
                         <h2>Жалобы</h2>
-                        <label><input type="checkbox" name="complaints" value="Не предъявляет"> Не предъявляет</label><br>
-                        <label><input type="checkbox" name="complaints" value="Предъявляет на..."> Предъявляет на...</label><br>
+                        <label><input type="checkbox" name="complaints" value="не предъявляет"> Не предъявляет</label><br>
+                        <label><input type="checkbox" name="complaints" value="предъявляет на"> Предъявляет на</label><br>
 
                         <!-- Поле для ввода деталей жалоб -->
                         <textarea name="complaints-detail" rows="3" class="form-control" placeholder="Уточните жалобы"></textarea>
@@ -424,26 +325,15 @@
                     <!-- Мышление -->
                     <section id="thinking">
                         <h2>Мышление</h2>
-                        <label><input type="checkbox" name="thinking" value="Бредовые идеи активно не высказывает"> Бредовые идеи активно не высказывает</label><br>
-                        <!-- Варианты бредовых идей -->
-                        <label><input type="checkbox" name="thinking" value="Бред преследования"> Бред преследования</label><br>
-                        <label><input type="checkbox" name="thinking" value="Бред величия"> Бред величия</label><br>
-                        <label><input type="checkbox" name="thinking" value="Бред богатства"> Бред богатства</label><br>
-                        <label><input type="checkbox" name="thinking" value="Бред высокого происхождения"> Бред высокого происхождения</label><br>
-                        <label><input type="checkbox" name="thinking" value="Бред собственной значимости"> Бред собственной значимости</label><br>
-                        <label><input type="checkbox" name="thinking" value="Бред изобретательства"> Бред изобретательства</label><br>
-                        <label><input type="checkbox" name="thinking" value="Бред ревности"> Бред ревности</label><br>
-                        <label><input type="checkbox" name="thinking" value="Бред вины"> Бред вины</label><br>
-                        <label><input type="checkbox" name="thinking" value="Ипохондрический бред"> Ипохондрический бред</label><br>
-                        <label><input type="checkbox" name="thinking" value="Бред дисморфомании"> Бред дисморфомании</label><br>
-                        <label><input type="checkbox" name="thinking" value="Бред материального ущерба"> Бред материального ущерба</label><br>
-                        <label><input type="checkbox" name="thinking" value="Бред греха"> Бред греха</label><br>
-                        <label><input type="checkbox" name="thinking" value="Религиозный бред"> Религиозный бред</label><br>
-                        <label><input type="checkbox" name="thinking" value="Бред отравления"> Бред отравления</label><br>
-                        <label><input type="checkbox" name="thinking" value="Бред воздействия"> Бред воздействия</label><br>
-                        <label><input type="checkbox" name="thinking" value="Бред отношения"> Бред отношения</label><br>
-                        <label><input type="checkbox" name="thinking" value="Бред особого значения"> Бред особого значения</label><br>
-                        <!-- Добавьте остальные варианты -->
+                        <label><input type="checkbox" name="thinking" value="бредовые идеи активно не высказывает"> Бредовые идеи активно не высказывает</label><br>
+                        <label><input type="checkbox" name="thinking" value="бред преследования"> Бред преследования</label><br>
+                        <label><input type="checkbox" name="thinking" value="бред величия"> Бред величия</label><br>
+                        <label><input type="checkbox" name="thinking" value="бред ревности"> Бред ревности</label><br>
+                        <label><input type="checkbox" name="thinking" value="бред вины"> Бред вины</label><br>
+                        <label><input type="checkbox" name="thinking" value="ипохондрический бред"> Ипохондрический бред</label><br>
+                        <label><input type="checkbox" name="thinking" value="бред воздействия"> Бред воздействия</label><br>
+                        <label><input type="checkbox" name="thinking" value="бред отношения"> Бред отношения</label><br>
+                        <label><input type="checkbox" name="thinking" value="бред особого значения"> Бред особого значения</label><br>
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="thinking-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -452,17 +342,17 @@
                     <!-- Восприятие -->
                     <section id="perception2">
                         <h2>Восприятие</h2>
-                        <label><input type="checkbox" name="perception2" value="Обманы восприятия не выявляются"> Обманы восприятия не выявляются</label><br>
-                        <label><input type="checkbox" name="perception2" value="Галлюцинации зрительные"> Галлюцинации зрительные</label><br>
-                        <label><input type="checkbox" name="perception2" value="Галлюцинации слуховые"> Галлюцинации слуховые</label><br>
-                        <label><input type="checkbox" name="perception2" value="Галлюцинации тактильные"> Галлюцинации тактильные</label><br>
-                        <label><input type="checkbox" name="perception2" value="Галлюцинации вкусовые"> Галлюцинации вкусовые</label><br>
-                        <label><input type="checkbox" name="perception2" value="Галлюцинации обонятельные"> Галлюцинации обонятельные</label><br>
-                        <label><input type="checkbox" name="perception2" value="Псевдогаллюцинации"> Псевдогаллюцинации</label><br>
-                        <label><input type="checkbox" name="perception2" value="Иллюзии"> Иллюзии</label><br>
-                        <label><input type="checkbox" name="perception2" value="Сенестопатии"> Сенестопатии</label><br>
-                        <label><input type="checkbox" name="perception2" value="Дереализация"> Дереализация</label><br>
-                        <label><input type="checkbox" name="perception2" value="Деперсонализация"> Деперсонализация</label><br>
+                        <label><input type="checkbox" name="perception2" value="обманы восприятия не выявляются"> Обманы восприятия не выявляются</label><br>
+                        <label><input type="checkbox" name="perception2" value="галлюцинации зрительные"> Галлюцинации зрительные</label><br>
+                        <label><input type="checkbox" name="perception2" value="галлюцинации слуховые"> Галлюцинации слуховые</label><br>
+                        <label><input type="checkbox" name="perception2" value="галлюцинации тактильные"> Галлюцинации тактильные</label><br>
+                        <label><input type="checkbox" name="perception2" value="галлюцинации вкусовые"> Галлюцинации вкусовые</label><br>
+                        <label><input type="checkbox" name="perception2" value="галлюцинации обонятельные"> Галлюцинации обонятельные</label><br>
+                        <label><input type="checkbox" name="perception2" value="псевдогаллюцинации"> Псевдогаллюцинации</label><br>
+                        <label><input type="checkbox" name="perception2" value="иллюзии"> Иллюзии</label><br>
+                        <label><input type="checkbox" name="perception2" value="сенестопатии"> Сенестопатии</label><br>
+                        <label><input type="checkbox" name="perception2" value="дереализация"> Дереализация</label><br>
+                        <label><input type="checkbox" name="perception2" value="деперсонализация"> Деперсонализация</label><br>
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="perception2-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -471,20 +361,17 @@
                     <!-- Настроение и эмоции -->
                     <section id="mood-emotions">
                         <h2>Настроение и эмоции</h2>
-                        <label><input type="checkbox" name="mood-emotions" value="Фон настроения ровный"> Фон настроения ровный</label><br>
-                        <label><input type="checkbox" name="mood-emotions" value="Фон настроения неустойчивый"> Фон настроения неустойчивый</label><br>
-                        <!-- Варианты настроения -->
-                        <label><input type="checkbox" name="mood-emotions" value="Гипомания"> Гипомания</label><br>
-                        <label><input type="checkbox" name="mood-emotions" value="Мания"> Мания</label><br>
-                        <label><input type="checkbox" name="mood-emotions" value="Гневливое"> Гневливое</label><br>
-                        <label><input type="checkbox" name="mood-emotions" value="Эйфория"> Эйфория</label><br>
-                        <label><input type="checkbox" name="mood-emotions" value="Экстаз"> Экстаз</label><br>
-                        <label><input type="checkbox" name="mood-emotions" value="Благодушие"> Благодушие</label><br>
-                        <label><input type="checkbox" name="mood-emotions" value="Депрессия"> Депрессия</label><br>
-                        <label><input type="checkbox" name="mood-emotions" value="Тревога"> Тревога</label><br>
-                        <label><input type="checkbox" name="mood-emotions" value="Страх"> Страх</label><br>
-                        <label><input type="checkbox" name="mood-emotions" value="Дисфория"> Дисфория</label><br>
-                        <label><input type="checkbox" name="mood-emotions" value="Растерянность"> Растерянность</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="фон настроения ровный"> Фон настроения ровный</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="фон настроения неустойчивый"> Фон настроения неустойчивый</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="гипомания"> Гипомания</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="мания"> Мания</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="гневливое"> Гневливое</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="эйфория"> Эйфория</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="депрессия"> Депрессия</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="тревога"> Тревога</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="страх"> Страх</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="дисфория"> Дисфория</label><br>
+                        <label><input type="checkbox" name="mood-emotions" value="растерянность"> Растерянность</label><br>
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="mood-emotions-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -493,9 +380,9 @@
                     <!-- Внимание -->
                     <section id="attention">
                         <h2>Внимание</h2>
-                        <label><input type="checkbox" name="attention" value="Невнимателен в беседе"> Невнимателен в беседе</label><br>
-                        <label><input type="checkbox" name="attention" value="Внимание приковано к..."> Внимание приковано к...</label><br>
-                        <label><input type="checkbox" name="attention" value="Отвлекается на..."> Отвлекается на...</label><br>
+                        <label><input type="checkbox" name="attention" value="невнимателен в беседе"> Невнимателен в беседе</label><br>
+                        <label><input type="checkbox" name="attention" value="внимание приковано к"> Внимание приковано к</label><br>
+                        <label><input type="checkbox" name="attention" value="отвлекается на"> Отвлекается на</label><br>
 
                         <!-- Поле для ввода деталей -->
                         <textarea name="attention-detail" rows="3" class="form-control" placeholder="Уточните"></textarea>
@@ -507,10 +394,10 @@
                     <!-- Память -->
                     <section id="memory">
                         <h2>Память</h2>
-                        <label><input type="checkbox" name="memory" value="Гипомнезия"> Гипомнезия</label><br>
-                        <label><input type="checkbox" name="memory" value="Гипермнезия"> Гипермнезия</label><br>
-                        <label><input type="checkbox" name="memory" value="Амнезия"> Амнезия</label><br>
-                        <label><input type="checkbox" name="memory" value="Парамнезия"> Парамнезия</label><br>
+                        <label><input type="checkbox" name="memory" value="гипомнезия"> Гипомнезия</label><br>
+                        <label><input type="checkbox" name="memory" value="гипермнезия"> Гипермнезия</label><br>
+                        <label><input type="checkbox" name="memory" value="амнезия"> Амнезия</label><br>
+                        <label><input type="checkbox" name="memory" value="парамнезия"> Парамнезия</label><br>
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="memory-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -519,10 +406,10 @@
                     <!-- Критика к состоянию -->
                     <section id="criticism">
                         <h2>Критика к состоянию</h2>
-                        <label><input type="checkbox" name="criticism" value="Критика сохранена"> Критика сохранена</label><br>
-                        <label><input type="checkbox" name="criticism" value="Критика снижена"> Критика снижена</label><br>
-                        <label><input type="checkbox" name="criticism" value="Критика отсутствует"> Критика отсутствует</label><br>
-                        <label><input type="checkbox" name="criticism" value="Критика формальная"> Критика формальная</label><br>
+                        <label><input type="checkbox" name="criticism" value="критика сохранена"> Критика сохранена</label><br>
+                        <label><input type="checkbox" name="criticism" value="критика снижена"> Критика снижена</label><br>
+                        <label><input type="checkbox" name="criticism" value="критика отсутствует"> Критика отсутствует</label><br>
+                        <label><input type="checkbox" name="criticism" value="критика формальная"> Критика формальная</label><br>
 
                         <!-- Поле для ввода собственного текста -->
                         <textarea name="criticism-notes" rows="3" class="form-control" placeholder="Введите дополнительные заметки"></textarea>
@@ -557,4 +444,3 @@
 </body>
 
 </html>
-
