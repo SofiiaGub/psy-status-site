@@ -3,17 +3,28 @@ function generateStatus() {
     const gender = document.querySelector('input[name="gender"]:checked').value;
     const pronoun = gender === 'Мужчина' ? 'Пациент' : 'Пациентка';
     const actionVerb = gender === 'Мужчина' ? 'пришел' : 'пришла';
+    const ending = gender === 'Мужчина' ? '' : 'а';
+    const participleEnding = gender === 'Мужчина' ? 'ен' : 'на';
 
-    let report = `${pronoun} ${actionVerb} на осмотр.\n`;
+    let report = `${pronoun} ${actionVerb} на осмотр.
+`;
 
     // Функция для добавления выбранных значений из чекбоксов и текстовых полей
     function addSectionData(sectionId, sectionTitle) {
         const checkboxes = document.querySelectorAll(`#${sectionId} input[type="checkbox"]:checked`);
         const notes = document.querySelector(`#${sectionId} textarea`)?.value.trim();
         
-        let selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
+        let selectedValues = Array.from(checkboxes).map(checkbox => {
+            let value = checkbox.value;
+            if (value.includes('(м)') || value.includes('(ж)')) {
+                value = gender === 'Мужчина' ? value.replace('(м)', '').replace('(ж)', '') : value.replace('(ж)', '').replace('(м)', '');
+            }
+            value = gender === 'Мужчина' ? value.replace('(ая)', '') : value.replace('(ый)', 'ая');
+            return value;
+        });
+
         if (selectedValues.length > 0) {
-            report += `${sectionTitle}: ${selectedValues.join(", ")}.`;
+            report += `${sectionTitle}: ${selectedValues.join(", " )}.`;
             if (notes) {
                 report += ` Дополнительно: ${notes}.`;
             }
@@ -49,3 +60,4 @@ function generateStatus() {
     // Отображение итогового отчета
     document.getElementById("result").value = report;
 }
+
