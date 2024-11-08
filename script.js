@@ -4,10 +4,11 @@ function generateStatus() {
     const pronoun = gender === 'Мужчина' ? 'Пациент' : 'Пациентка';
     const actionVerb = gender === 'Мужчина' ? 'пришел' : 'пришла';
     const ending = gender === 'Мужчина' ? '' : 'а';
-    const participleEnding = gender === 'Мужчина' ? 'ен' : 'на';
+    const participleEnding = gender === 'Мужчина' ? 'ен' : 'ена';
     const adjectiveEnding = gender === 'Мужчина' ? 'ый' : 'ая';
     const adjectiveEndingAlt = gender === 'Мужчина' ? 'ий' : 'ая';
     const orientedEnding = gender === 'Мужчина' ? 'ирован' : 'ирована';
+    const orientedAltEnding = gender === 'Мужчина' ? 'ированн' : 'ированна';
 
     let report = `${pronoun} ${actionVerb} на осмотр.
 `;
@@ -22,7 +23,13 @@ function generateStatus() {
             if (value.includes('(м)') || value.includes('(ж)')) {
                 value = gender === 'Мужчина' ? value.replace('(м)', '').replace('(ж)', '') : value.replace('(ж)', '').replace('(м)', '');
             }
-            value = value.replace('(ый)', adjectiveEnding).replace('(ий)', adjectiveEndingAlt).replace('(ирован)', orientedEnding);
+            value = value
+                .replace('(ый)', adjectiveEnding)
+                .replace('(ий)', adjectiveEndingAlt)
+                .replace('(ирован)', orientedEnding)
+                .replace('(ированн)', orientedAltEnding)
+                .replace('(ен)', participleEnding)
+                .replace('(н)', participleEnding);
             return value;
         });
 
