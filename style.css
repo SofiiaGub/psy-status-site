@@ -1,54 +1,42 @@
-/* Общие стили для тела страницы */
+/* Основные стили для всего документа */
 body {
     font-family: Arial, sans-serif;
-    color: #4a3b2d;
-    margin: 0;
-    background-color: #f7f4f0;
+    background-color: #f8f9fa;
 }
 
-/* Стили для контейнера основного содержимого */
-.container {
-    max-width: 100%;
-    padding: 20px;
+h1, h2, h3 {
+    color: #343a40;
 }
 
-/* Стили для заголовков */
 h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 }
 
 h2 {
-    font-size: 1.5rem;
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 h3 {
-    font-size: 1.2rem;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
-/* Стили для бокового меню */
+.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Боковое меню */
 .sidebar {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    padding: 60px 0 0; /* Отступ сверху */
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-    overflow-y: auto; /* Добавляем прокрутку */
+    z-index: 100;
+    padding: 48px 0 0; /* Высота фиксированной навигации */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
     background-color: #f8f9fa;
-}
-
-.sidebar-sticky {
-    position: relative;
-    top: 0;
-    height: calc(100vh - 60px);
-    padding-top: .5rem;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 .sidebar .nav-link {
@@ -56,81 +44,63 @@ h3 {
     color: #333;
 }
 
-.sidebar .nav-link.active {
+.sidebar .nav-link:hover {
     color: #007bff;
 }
 
-.sidebar-heading {
-    font-size: 1.2rem;
-    text-align: center;
-    margin-bottom: 1rem;
+.sidebar .nav-link.active {
+    color: #007bff;
+    font-weight: bold;
 }
 
-/* Стили для основного содержимого */
+/* Основное содержимое */
 main {
-    margin-left: 220px; /* Ширина бокового меню */
-    padding: 20px;
+    margin-left: 260px; /* Задайте ширину для меню */
+    padding: 1.5rem;
 }
 
-/* Стили для кнопки */
-button.custom-button {
-    margin-top: 20px;
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    color: #ffffff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button.custom-button:hover {
-    background-color: #0056b3;
-}
-
-/* Стили для формы */
-section {
-    margin-bottom: 30px;
-}
-
+/* Стили для формы ввода */
 label {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 5px;
+    font-weight: 600;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-    margin-right: 5px;
+    margin-right: 0.5rem;
 }
 
-textarea.form-control {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    resize: vertical;
+textarea {
+    margin-top: 1rem;
 }
 
-/* Стили для секции вывода отчета */
+.custom-button {
+    margin-top: 2rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+    background-color: #0056b3;
+}
+
+/* Секция для отображения отчета */
 #output {
-    margin-top: 40px;
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
 }
 
 #result {
     width: 100%;
     padding: 10px;
-    font-size: 1rem;
-    resize: vertical;
-}
-
-/* Адаптивность для маленьких экранов */
-@media (max-width: 768px) {
-    .sidebar {
-        display: none;
-    }
-
-    main {
-        margin-left: 0;
-    }
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    font-family: monospace;
+    background-color: #f8f9fa;
 }
