@@ -5,6 +5,8 @@ function generateStatus() {
     const actionVerb = gender === 'Мужчина' ? 'пришел' : 'пришла';
     const ending = gender === 'Мужчина' ? '' : 'а';
     const participleEnding = gender === 'Мужчина' ? 'ен' : 'на';
+    const adjectiveEnding = gender === 'Мужчина' ? 'ый' : 'ая';
+    const adjectiveEndingAlt = gender === 'Мужчина' ? 'ий' : 'ая';
 
     let report = `${pronoun} ${actionVerb} на осмотр.
 `;
@@ -19,7 +21,7 @@ function generateStatus() {
             if (value.includes('(м)') || value.includes('(ж)')) {
                 value = gender === 'Мужчина' ? value.replace('(м)', '').replace('(ж)', '') : value.replace('(ж)', '').replace('(м)', '');
             }
-            value = gender === 'Мужчина' ? value.replace('(ая)', '') : value.replace('(ый)', 'ая');
+            value = value.replace('(ый)', adjectiveEnding).replace('(ий)', adjectiveEndingAlt);
             return value;
         });
 
@@ -60,4 +62,3 @@ function generateStatus() {
     // Отображение итогового отчета
     document.getElementById("result").value = report;
 }
-
